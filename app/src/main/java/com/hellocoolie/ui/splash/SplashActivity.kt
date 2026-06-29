@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
+import com.hellocoolie.R
 import com.hellocoolie.data.repository.AuthRepository
 import com.hellocoolie.ui.auth.AuthActivity
 import com.hellocoolie.ui.porter.PorterMainActivity
@@ -22,19 +23,19 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // No layout — pure splash with theme window background
+        setContentView(R.layout.activity_splash)
 
         lifecycleScope.launch {
-            delay(1800) // Show splash for 1.8s
+            delay(2000)
             navigate()
         }
     }
 
     private fun navigate() {
         val intent = when {
-            !authRepository.isLoggedIn() -> Intent(this, AuthActivity::class.java)
-            authRepository.getRole() == "porter" -> Intent(this, PorterMainActivity::class.java)
-            else -> Intent(this, UserMainActivity::class.java)
+            !authRepository.isLoggedIn()            -> Intent(this, AuthActivity::class.java)
+            authRepository.getRole() == "porter"    -> Intent(this, PorterMainActivity::class.java)
+            else                                    -> Intent(this, UserMainActivity::class.java)
         }
         startActivity(intent)
         finish()
