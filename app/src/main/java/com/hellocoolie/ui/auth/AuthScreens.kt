@@ -18,6 +18,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import com.hellocoolie.data.model.*
 import com.hellocoolie.data.repository.AuthRepository
 import com.hellocoolie.databinding.*
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
 import com.hellocoolie.ui.porter.PorterMainActivity
 import com.hellocoolie.ui.user.UserMainActivity
 import com.hellocoolie.utils.Result
@@ -158,7 +163,7 @@ class UserLoginFragment : Fragment() {
                 .commit()
         }
 
-        viewModel.state.observe(viewLifecycleOwner) { state ->
+        lifecycleScope.launch { repeatOnLifecycle(Lifecycle.State.STARTED) { viewModel.state.collect { state ->
             when (state) {
                 is AuthState.Loading      -> binding.btnLogin.isEnabled = false
                 is AuthState.UserLoggedIn -> navigateToUserMain()
@@ -177,17 +182,6 @@ class UserLoginFragment : Fragment() {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
     }
 
-    // Extension to observe StateFlow
-    private fun <T> kotlinx.coroutines.flow.StateFlow<T>.observe(
-        owner: androidx.lifecycle.LifecycleOwner,
-        observer: (T) -> Unit
-    ) {
-        androidx.lifecycle.lifecycleScope.launch {
-            androidx.lifecycle.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
-                collect { observer(it) }
-            }
-        }
-    }
 
     override fun onDestroyView() { super.onDestroyView(); _binding = null }
 }
@@ -230,7 +224,7 @@ class PorterLoginFragment : Fragment() {
                 .commit()
         }
 
-        viewModel.state.observe(viewLifecycleOwner) { state ->
+        lifecycleScope.launch { repeatOnLifecycle(Lifecycle.State.STARTED) { viewModel.state.collect { state ->
             when (state) {
                 is AuthState.Loading       -> binding.btnPorterLogin.isEnabled = false
                 is AuthState.PorterLoggedIn-> navigateToPorterMain()
@@ -247,13 +241,6 @@ class PorterLoginFragment : Fragment() {
 
     private fun toast(msg: String) = Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
 
-    private fun <T> kotlinx.coroutines.flow.StateFlow<T>.observe(
-        owner: androidx.lifecycle.LifecycleOwner, observer: (T) -> Unit
-    ) {
-        androidx.lifecycle.lifecycleScope.launch {
-            androidx.lifecycle.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
-                collect { observer(it) }
-            }
         }
     }
 
@@ -289,7 +276,7 @@ class UserRegisterFragment : Fragment() {
             viewModel.registerUser(name, phone, pass, dob, null)
         }
 
-        viewModel.state.observe(viewLifecycleOwner) { state ->
+        lifecycleScope.launch { repeatOnLifecycle(Lifecycle.State.STARTED) { viewModel.state.collect { state ->
             when (state) {
                 is AuthState.Registered -> { toast(state.message); parentFragmentManager.popBackStack() }
                 is AuthState.Error      -> toast(state.message)
@@ -300,13 +287,6 @@ class UserRegisterFragment : Fragment() {
 
     private fun toast(msg: String) = Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
 
-    private fun <T> kotlinx.coroutines.flow.StateFlow<T>.observe(
-        owner: androidx.lifecycle.LifecycleOwner, observer: (T) -> Unit
-    ) {
-        androidx.lifecycle.lifecycleScope.launch {
-            androidx.lifecycle.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
-                collect { observer(it) }
-            }
         }
     }
 
@@ -357,7 +337,7 @@ class PorterRegisterFragment : Fragment() {
             viewModel.registerPorter(req)
         }
 
-        viewModel.state.observe(viewLifecycleOwner) { state ->
+        lifecycleScope.launch { repeatOnLifecycle(Lifecycle.State.STARTED) { viewModel.state.collect { state ->
             when (state) {
                 is AuthState.Registered -> { toast(state.message); parentFragmentManager.popBackStack() }
                 is AuthState.Error      -> toast(state.message)
@@ -368,13 +348,6 @@ class PorterRegisterFragment : Fragment() {
 
     private fun toast(msg: String) = Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
 
-    private fun <T> kotlinx.coroutines.flow.StateFlow<T>.observe(
-        owner: androidx.lifecycle.LifecycleOwner, observer: (T) -> Unit
-    ) {
-        androidx.lifecycle.lifecycleScope.launch {
-            androidx.lifecycle.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
-                collect { observer(it) }
-            }
         }
     }
 
@@ -424,7 +397,7 @@ class ForgotPasswordFragment : Fragment() {
             if (newPass != confirm) { toast("Passwords do not match"); return@setOnClickListener }
             if (newPass.length < 6) { toast("Password too short"); return@setOnClickListener }
 
-            viewModel.state.observe(viewLifecycleOwner) { }
+            lifecycleScope.launch { repeatOnLifecycle(Lifecycle.State.STARTED) { viewModel.state.collect { }
             // Direct API call via repository
             androidx.lifecycle.lifecycleScope.launch {
                 viewModel.resetState()
@@ -437,9 +410,3 @@ class ForgotPasswordFragment : Fragment() {
 
     private fun toast(msg: String) = Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
 
-    private fun <T> kotlinx.coroutines.flow.StateFlow<T>.observe(
-        owner: androidx.lifecycle.LifecycleOwner, observer: (T) -> Unit
-    ) {}
-
-    override fun onDestroyView() { super.onDestroyView(); _binding = null }
-}
