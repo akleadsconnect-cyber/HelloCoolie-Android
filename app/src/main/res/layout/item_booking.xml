@@ -20,8 +20,8 @@
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="✅ Completed"
                 android:textColor="@color/hc_green" android:textSize="11sp" android:textStyle="bold"
-                android:background="@drawable/badge_green" android:paddingHorizontal="10dp"
-                android:paddingVertical="4dp"/>
+                android:background="@drawable/badge_green" android:paddingLeft="10dp" android:paddingRight="10dp"
+                android:paddingTop="4dp" android:paddingBottom="4dp"/>
             <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
             <TextView android:id="@+id/tv_booking_id"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"

@@ -20,7 +20,7 @@
             android:gravity="center"
             android:paddingTop="40dp"
             android:paddingBottom="28dp"
-            android:paddingHorizontal="20dp">
+            android:paddingLeft="20dp" android:paddingRight="20dp">
 
             <!-- Avatar -->
             <FrameLayout android:layout_width="72dp" android:layout_height="72dp"
@@ -48,7 +48,7 @@
             <!-- Stats row -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:orientation="horizontal" android:background="#33FFFFFF"
-                android:paddingVertical="14dp" android:paddingHorizontal="10dp">
+                android:paddingTop="14dp" android:paddingBottom="14dp" android:paddingLeft="10dp" android:paddingRight="10dp">
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:orientation="vertical" android:gravity="center">
@@ -114,7 +114,7 @@
                         android:layout_width="wrap_content" android:layout_height="40dp"
                         android:text="SOS" android:textColor="@color/white"
                         android:textStyle="bold" android:background="@drawable/circle_red"
-                        android:paddingHorizontal="16dp"
+                        android:paddingLeft="16dp" android:paddingRight="16dp"
                         android:stateListAnimator="@null"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -129,7 +129,7 @@
                     <!-- Member since -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
                         android:orientation="horizontal" android:gravity="center_vertical"
-                        android:paddingHorizontal="14dp">
+                        android:paddingLeft="14dp" android:paddingRight="14dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="📅" android:textSize="18sp" android:layout_marginEnd="12dp"/>
                         <TextView android:layout_width="0dp" android:layout_height="wrap_content"
@@ -141,13 +141,13 @@
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp"
-                        android:background="@color/gray_100" android:marginHorizontal="14dp"/>
+                        android:background="@color/gray_100" android:marginLeft="14dp" android:marginRight="14dp"/>
 
                     <!-- Call support -->
                     <LinearLayout android:id="@+id/btn_call_support"
                         android:layout_width="match_parent" android:layout_height="56dp"
                         android:orientation="horizontal" android:gravity="center_vertical"
-                        android:paddingHorizontal="14dp" android:clickable="true" android:focusable="true"
+                        android:paddingLeft="14dp" android:paddingRight="14dp" android:clickable="true" android:focusable="true"
                         android:background="?attr/selectableItemBackground">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="📞" android:textSize="18sp" android:layout_marginEnd="12dp"/>

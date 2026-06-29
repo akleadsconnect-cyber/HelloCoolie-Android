@@ -13,7 +13,7 @@
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:background="@drawable/bg_gradient_orange_blue"
             android:orientation="horizontal" android:gravity="center_vertical"
-            android:paddingHorizontal="16dp" android:paddingTop="48dp" android:paddingBottom="24dp">
+            android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingTop="48dp" android:paddingBottom="24dp">
             <ImageView android:id="@+id/btn_back"
                 android:layout_width="40dp" android:layout_height="40dp"
                 android:src="@drawable/ic_arrow_right" android:rotation="180"
@@ -34,7 +34,7 @@
 
         <!-- FORM CONTENT -->
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingTop="20dp">
+            android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingTop="20dp">
 
             <!-- ── TRAVELLER DETAILS CARD ── -->
             <androidx.cardview.widget.CardView
@@ -118,7 +118,7 @@
                             android:layout_weight="1" android:layout_marginStart="8dp"
                             android:background="@drawable/card_white"
                             android:entries="@array/gender_options"
-                            android:paddingHorizontal="12dp"/>
+                            android:paddingLeft="12dp" android:paddingRight="12dp"/>
                     </LinearLayout>
 
                     <!-- Senior + Woman solo toggles -->
@@ -128,7 +128,7 @@
                             android:layout_weight="1" android:orientation="horizontal"
                             android:gravity="center_vertical" android:layout_marginEnd="8dp"
                             android:background="@drawable/card_blue_bg"
-                            android:paddingHorizontal="12dp" android:paddingVertical="8dp">
+                            android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="8dp" android:paddingBottom="8dp">
                             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="👴 Senior Citizen" android:textSize="12sp"
@@ -143,7 +143,7 @@
                             android:layout_weight="1" android:orientation="horizontal"
                             android:gravity="center_vertical" android:layout_marginStart="8dp"
                             android:background="@drawable/card_orange_bg"
-                            android:paddingHorizontal="12dp" android:paddingVertical="8dp">
+                            android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="8dp" android:paddingBottom="8dp">
                             <TextView android:layout_width="0dp" android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="👩 Solo Woman" android:textSize="12sp"
@@ -363,7 +363,7 @@
                             android:text="Live price" android:textColor="@color/hc_green"
                             android:textSize="11sp" android:textStyle="bold"
                             android:background="@drawable/badge_green"
-                            android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                            android:paddingLeft="8dp" android:paddingRight="8dp" android:paddingTop="3dp" android:paddingBottom="3dp"/>
                     </LinearLayout>
 
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"

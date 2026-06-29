@@ -13,7 +13,7 @@
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:background="@drawable/bg_gradient_orange_blue"
             android:orientation="vertical"
-            android:paddingHorizontal="20dp"
+            android:paddingLeft="20dp" android:paddingRight="20dp"
             android:paddingTop="48dp" android:paddingBottom="28dp">
 
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
 
         <!-- FORM -->
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingTop="20dp">
+            android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingTop="20dp">
 
             <!-- SECTION 1: Personal Info -->
             <androidx.cardview.widget.CardView android:layout_width="match_parent"
@@ -153,7 +153,7 @@
                         android:layout_width="match_parent" android:layout_height="52dp"
                         android:background="@drawable/input_bg"
                         android:entries="@array/gender_options"
-                        android:paddingHorizontal="14dp" android:layout_marginBottom="12dp"/>
+                        android:paddingLeft="14dp" android:paddingRight="14dp" android:layout_marginBottom="12dp"/>
 
                     <!-- Address -->
                     <com.google.android.material.textfield.TextInputLayout

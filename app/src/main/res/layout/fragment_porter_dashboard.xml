@@ -59,8 +59,8 @@
 
             <!-- Rating -->
             <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:background="#33FFFFFF" android:paddingHorizontal="12dp"
-                android:paddingVertical="6dp" android:orientation="horizontal"
+                android:background="#33FFFFFF" android:paddingLeft="12dp" android:paddingRight="12dp"
+                android:paddingTop="6dp" android:paddingBottom="6dp" android:orientation="horizontal"
                 android:gravity="center_vertical">
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="★ " android:textColor="#FFD700" android:textSize="14sp"/>
@@ -96,7 +96,7 @@
                 android:layout_height="72dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:paddingHorizontal="20dp">
+                android:paddingLeft="20dp" android:paddingRight="20dp">
 
                 <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:orientation="vertical">
@@ -135,7 +135,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="16dp"
+            android:paddingLeft="16dp" android:paddingRight="16dp"
             android:paddingTop="16dp">
 
             <!-- OTP CARD (hidden by default, shows when booking accepted) -->
@@ -219,8 +219,8 @@
 
                     <!-- Status bar -->
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:background="@drawable/card_green_bg" android:paddingHorizontal="16dp"
-                        android:paddingVertical="10dp" android:orientation="horizontal"
+                        android:background="@drawable/card_green_bg" android:paddingLeft="16dp" android:paddingRight="16dp"
+                        android:paddingTop="10dp" android:paddingBottom="10dp" android:orientation="horizontal"
                         android:gravity="center_vertical" android:layout_marginBottom="16dp">
                         <View android:layout_width="8dp" android:layout_height="8dp"
                             android:background="@drawable/circle_green" android:layout_marginEnd="8dp"/>
