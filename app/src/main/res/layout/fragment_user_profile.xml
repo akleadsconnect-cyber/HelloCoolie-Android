@@ -141,7 +141,7 @@
                     </LinearLayout>
 
                     <View android:layout_width="match_parent" android:layout_height="1dp"
-                        android:background="@color/gray_100" android:marginLeft="14dp" android:marginRight="14dp"/>
+                        android:background="@color/gray_100" android:layout_marginLeft="14dp" android:layout_marginRight="14dp"/>
 
                     <!-- Call support -->
                     <LinearLayout android:id="@+id/btn_call_support"
