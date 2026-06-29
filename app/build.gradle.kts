@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt)
     alias(libs.plugins.navigation.safeargs)
-    id("com.google.devtools.ksp") version "1.9.24-1.0.20"
+    alias(libs.plugins.ksp)
 }
 
 android {
