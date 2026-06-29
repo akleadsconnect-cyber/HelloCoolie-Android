@@ -1,159 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_50"
-    android:fillViewport="true">
+    android:orientation="vertical"
+    android:background="@color/white">
 
+    <!-- HEADER gradient with logo -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:background="@drawable/bg_gradient_orange_blue"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="28dp">
 
-        <!-- HEADER -->
-        <LinearLayout
+        <!-- Logo white card centered -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white">
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="68dp"
+                android:src="@drawable/logo"
+                android:scaleType="fitCenter"
+                android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Welcome -->
+        <TextView
+            android:id="@+id/tv_welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_gradient_orange_blue"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:paddingTop="40dp"
-            android:paddingBottom="32dp">
+            android:text="Hello, Traveller 👋"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="2dp"/>
 
-            <!-- Logo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Where are you travelling today?"
+            android:textColor="#FFFFFFCC"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- Book Porter CTA card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@color/white">
             <LinearLayout
+                android:id="@+id/btn_book_coolie"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginBottom="16dp">
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="8dp"
-                    app:cardBackgroundColor="@color/white">
-                    <ImageView
-                        android:layout_width="200dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/logo"
-                        android:scaleType="fitCenter"
-                        android:padding="10dp"/>
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tv_welcome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hello, Traveller 👋"
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginBottom="4dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Where are you travelling today?"
-                android:textColor="#FFFFFFBB"
-                android:textSize="13sp"
-                android:gravity="center"
-                android:layout_marginBottom="20dp"/>
-
-            <!-- Book Porter CTA -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="12dp"
-                app:cardBackgroundColor="@color/white">
-                <LinearLayout
-                    android:id="@+id/btn_book_coolie"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:padding="18dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                android:layout_height="72dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="18dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🧳" android:textSize="30sp" android:layout_marginEnd="14dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                        android:text="🧳" android:textSize="32sp" android:layout_marginEnd="14dp"/>
-                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
-                        android:layout_weight="1" android:orientation="vertical">
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Book a Porter"
-                            android:textColor="@color/gray_900" android:textSize="18sp" android:textStyle="bold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Instant booking at your station"
-                            android:textColor="@color/gray_400" android:textSize="12sp"/>
-                    </LinearLayout>
-                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
-                        android:src="@drawable/ic_arrow_right" app:tint="@color/hc_orange"/>
+                        android:text="Book a Porter"
+                        android:textColor="@color/gray_900" android:textSize="17sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Instant booking at your station"
+                        android:textColor="@color/gray_400" android:textSize="12sp"/>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
+                <ImageView android:layout_width="22dp" android:layout_height="22dp"
+                    android:src="@drawable/ic_arrow_right" app:tint="@color/hc_orange"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
-        <!-- CONTENT -->
+    <!-- SCROLLABLE CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Stats cards -->
+            <!-- 3 quick stat cards -->
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:orientation="horizontal" android:layout_marginBottom="16dp">
 
                 <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:layout_marginEnd="8dp"
-                    app:cardCornerRadius="14dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="12dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:orientation="vertical" android:padding="14dp" android:gravity="center">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="💰" android:textSize="22sp" android:layout_marginBottom="4dp"/>
+                            android:text="💰" android:textSize="20sp" android:layout_marginBottom="4dp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="₹80" android:textSize="18sp" android:textStyle="bold"
+                            android:text="₹80" android:textSize="16sp" android:textStyle="bold"
                             android:textColor="@color/hc_orange"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Base fare" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                            android:text="Base fare" android:textColor="@color/gray_400" android:textSize="10sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:layout_marginHorizontal="4dp"
-                    app:cardCornerRadius="14dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                    android:layout_weight="1" android:layout_marginHorizontal="3dp"
+                    app:cardCornerRadius="12dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:orientation="vertical" android:padding="14dp" android:gravity="center">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="⏱️" android:textSize="22sp" android:layout_marginBottom="4dp"/>
+                            android:text="⚡" android:textSize="20sp" android:layout_marginBottom="4dp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="30s" android:textSize="18sp" android:textStyle="bold"
+                            android:text="30s" android:textSize="16sp" android:textStyle="bold"
                             android:textColor="@color/hc_blue"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Response" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                            android:text="Response" android:textColor="@color/gray_400" android:textSize="10sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:layout_marginStart="8dp"
-                    app:cardCornerRadius="14dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                    android:layout_weight="1" android:layout_marginStart="6dp"
+                    app:cardCornerRadius="12dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                         android:orientation="vertical" android:padding="14dp" android:gravity="center">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="⭐" android:textSize="22sp" android:layout_marginBottom="4dp"/>
+                            android:text="✅" android:textSize="20sp" android:layout_marginBottom="4dp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Verified" android:textSize="14sp" android:textStyle="bold"
+                            android:text="Verified" android:textSize="13sp" android:textStyle="bold"
                             android:textColor="@color/hc_green"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Porters" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                            android:text="Porters" android:textColor="@color/gray_400" android:textSize="10sp"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
+            <!-- Info banner -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/hc_orange_bg">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:padding="14dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ℹ️" android:textSize="18sp" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="OTP-verified porters only. Contact shared after OTP verification."
+                        android:textColor="@color/hc_orange_dark" android:textSize="12sp"
+                        android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+
+</LinearLayout>
