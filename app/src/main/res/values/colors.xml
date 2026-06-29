@@ -45,4 +45,5 @@
 
     <!-- Shadows/elevations -->
     <color name="shadow_color">#1A000000</color>
+    <color name="hc_blue_border">#B3D4F0</color>
 </resources>

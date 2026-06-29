@@ -178,16 +178,16 @@
 
                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                     android:orientation="vertical" android:padding="20dp">
-                    <include layout="@layout/item/item_step" android:id="@+id/step1"/>
+                    <include layout="@layout/item_step" android:id="@+id/step1"/>
                     <View android:layout_width="1dp" android:layout_height="24dp"
                         android:background="@color/gray_200" android:layout_marginStart="20dp"/>
-                    <include layout="@layout/item/item_step" android:id="@+id/step2"/>
+                    <include layout="@layout/item_step" android:id="@+id/step2"/>
                     <View android:layout_width="1dp" android:layout_height="24dp"
                         android:background="@color/gray_200" android:layout_marginStart="20dp"/>
-                    <include layout="@layout/item/item_step" android:id="@+id/step3"/>
+                    <include layout="@layout/item_step" android:id="@+id/step3"/>
                     <View android:layout_width="1dp" android:layout_height="24dp"
                         android:background="@color/gray_200" android:layout_marginStart="20dp"/>
-                    <include layout="@layout/item/item_step" android:id="@+id/step4"/>
+                    <include layout="@layout/item_step" android:id="@+id/step4"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

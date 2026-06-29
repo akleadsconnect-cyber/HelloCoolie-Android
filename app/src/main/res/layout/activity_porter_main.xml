@@ -23,7 +23,6 @@
         app:itemIconTint="@color/nav_color_selector"
         app:itemTextColor="@color/nav_color_selector"
         app:labelVisibilityMode="labeled"
-        app:itemActiveIndicatorColor="@color/hc_orange_bg"
         app:itemIconSize="22dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
