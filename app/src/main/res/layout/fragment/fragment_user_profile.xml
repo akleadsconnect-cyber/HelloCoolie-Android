@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="Akshay Rai" android:textColor="@color/white"
                 android:textSize="22sp" android:textStyle="bold"
-                android:fontFamily="@font/nunito_bold" android:layout_marginBottom="4dp"/>
+                android:fontFamily="sans-serif-medium" android:layout_marginBottom="4dp"/>
             <TextView android:id="@+id/tv_phone"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="+91 98XXXXXXXX" android:textColor="#FFFFFFBB" android:textSize="14sp"/>

@@ -10,12 +10,9 @@
         <item name="colorSecondary">@color/hc_blue</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="colorSurface">@color/white</item>
-        <item name="colorBackground">@color/gray_50</item>
-        <item name="android:colorBackground">@color/gray_50</item>
         <item name="android:statusBarColor">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/white</item>
-        <item name="android:fontFamily">@font/inter</item>
     </style>
 
     <!-- Splash screen -->
@@ -23,11 +20,7 @@
         <item name="android:statusBarColor">@color/hc_orange</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:navigationBarColor">@color/hc_orange</item>
-    </style>
-
-    <!-- Auth -->
-    <style name="Theme.HelloCoolie.Auth" parent="Theme.HelloCoolie">
-        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowBackground">@drawable/bg_gradient_orange_blue</item>
     </style>
 
     <!-- Buttons -->
@@ -77,18 +70,6 @@
         <item name="boxCornerRadiusTopStart">10dp</item>
     </style>
 
-    <!-- Status badge text styles -->
-    <style name="Widget.HelloCoolie.Badge.Green">
-        <item name="android:background">@drawable/badge_green_bg</item>
-        <item name="android:textColor">@color/hc_green</item>
-        <item name="android:textSize">11sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:paddingStart">8dp</item>
-        <item name="android:paddingEnd">8dp</item>
-        <item name="android:paddingTop">2dp</item>
-        <item name="android:paddingBottom">2dp</item>
-    </style>
-
     <!-- Typography -->
     <style name="TextAppearance.HelloCoolie.Display" parent="TextAppearance.Material3.DisplaySmall">
         <item name="android:textColor">@color/gray_900</item>
@@ -113,6 +94,11 @@
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/hc_orange</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HelloCoolie.Body">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_700</item>
     </style>
 
 </resources>

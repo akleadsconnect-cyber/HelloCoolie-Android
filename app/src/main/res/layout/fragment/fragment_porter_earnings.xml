@@ -25,7 +25,7 @@
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="My Earnings 💰"
                 android:textColor="@color/white" android:textSize="24sp"
-                android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                android:textStyle="bold" android:fontFamily="sans-serif-medium"
                 android:layout_marginBottom="4dp"/>
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="Track your income and performance"
@@ -48,7 +48,7 @@
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="₹0"
                         android:textColor="@color/white" android:textSize="40sp"
-                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                        android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
                     <TextView android:id="@+id/tv_all_time_trips"
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="0 total trips"
@@ -87,7 +87,7 @@
                         <TextView android:id="@+id/tv_today"
                             android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="₹0" android:textSize="20sp" android:textStyle="bold"
-                            android:textColor="@color/gray_900" android:fontFamily="@font/nunito_bold"/>
+                            android:textColor="@color/gray_900" android:fontFamily="sans-serif-medium"/>
                         <TextView android:id="@+id/tv_today_trips"
                             android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="0 trips" android:textColor="@color/gray_400" android:textSize="11sp"/>
@@ -109,7 +109,7 @@
                         <TextView android:id="@+id/tv_week"
                             android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="₹0" android:textSize="20sp" android:textStyle="bold"
-                            android:textColor="@color/gray_900" android:fontFamily="@font/nunito_bold"/>
+                            android:textColor="@color/gray_900" android:fontFamily="sans-serif-medium"/>
                         <TextView android:id="@+id/tv_week_trips"
                             android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="0 trips" android:textColor="@color/gray_400" android:textSize="11sp"/>
@@ -131,7 +131,7 @@
                         <TextView android:id="@+id/tv_month"
                             android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="₹0" android:textSize="20sp" android:textStyle="bold"
-                            android:textColor="@color/gray_900" android:fontFamily="@font/nunito_bold"/>
+                            android:textColor="@color/gray_900" android:fontFamily="sans-serif-medium"/>
                         <TextView android:id="@+id/tv_month_trips"
                             android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="0 trips" android:textColor="@color/gray_400" android:textSize="11sp"/>
@@ -150,7 +150,7 @@
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Last 7 Days"
                         android:textColor="@color/gray_900" android:textSize="15sp"
-                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:textStyle="bold" android:fontFamily="sans-serif-medium"
                         android:layout_marginBottom="16dp"/>
                     <com.github.mikephil.charting.charts.BarChart
                         android:id="@+id/bar_chart"

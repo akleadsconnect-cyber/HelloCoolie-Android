@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="New Delhi Station"
                 android:textColor="@color/gray_900" android:textSize="15sp"
-                android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
         </LinearLayout>
 
         <!-- Bags + train -->
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="₹120"
                 android:textColor="@color/hc_orange" android:textSize="20sp"
-                android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:text="Ramesh Kumar" android:textColor="@color/white"
                 android:textSize="22sp" android:textStyle="bold"
-                android:fontFamily="@font/nunito_bold" android:layout_marginBottom="4dp"/>
+                android:fontFamily="sans-serif-medium" android:layout_marginBottom="4dp"/>
 
             <TextView android:id="@+id/tv_phone"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="★ 4.9" android:textColor="#FFD700"
                         android:textSize="18sp" android:textStyle="bold"
-                        android:fontFamily="@font/nunito_bold"/>
+                        android:fontFamily="sans-serif-medium"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Rating" android:textColor="#FFFFFFBB" android:textSize="11sp"/>
                 </LinearLayout>
@@ -63,7 +63,7 @@
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="148" android:textColor="@color/white"
                         android:textSize="18sp" android:textStyle="bold"
-                        android:fontFamily="@font/nunito_bold"/>
+                        android:fontFamily="sans-serif-medium"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="Total Trips" android:textColor="#FFFFFFBB" android:textSize="11sp"/>
                 </LinearLayout>
@@ -101,7 +101,7 @@
                         android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="New Delhi Railway Station"
                         android:textColor="@color/hc_blue" android:textSize="16sp"
-                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                        android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

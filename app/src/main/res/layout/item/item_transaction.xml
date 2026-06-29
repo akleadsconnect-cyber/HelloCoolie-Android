@@ -36,5 +36,5 @@
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:text="+₹110"
         android:textColor="@color/hc_green" android:textSize="16sp"
-        android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+        android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
 </LinearLayout>

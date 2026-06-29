@@ -44,7 +44,7 @@
             android:text='"Your Porter, Just a Hello Away!"'
             android:textColor="#FFFFFFCC"
             android:textSize="13sp"
-            android:fontFamily="@font/inter"
+            android:fontFamily="sans-serif"
             android:textStyle="italic"/>
     </LinearLayout>
 

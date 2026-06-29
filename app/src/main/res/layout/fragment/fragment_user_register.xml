@@ -20,7 +20,7 @@
                 android:layout_weight="1" android:orientation="vertical">
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="Create Account" android:textColor="@color/white"
-                    android:textSize="22sp" android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                    android:textSize="22sp" android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="Join millions of travellers" android:textColor="#FFFFFFBB" android:textSize="12sp"/>
             </LinearLayout>
@@ -80,7 +80,7 @@
                 android:layout_width="match_parent" android:layout_height="56dp"
                 android:text="Create Account →"
                 android:textColor="@color/white" android:textSize="17sp"
-                android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                android:textStyle="bold" android:fontFamily="sans-serif-medium"
                 android:background="@drawable/ripple_orange"
                 android:stateListAnimator="@null" android:elevation="6dp"
                 android:layout_marginBottom="32dp"/>

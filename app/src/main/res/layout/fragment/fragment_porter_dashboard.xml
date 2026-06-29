@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="Ramesh Kumar"
                     android:textColor="@color/white" android:textSize="18sp"
-                    android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                    android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
                 <TextView android:id="@+id/tv_porter_badge"
                     android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="Badge: NDLS-245"
@@ -167,7 +167,7 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                                 android:text="Booking Accepted!"
                                 android:textColor="@color/hc_orange" android:textSize="16sp"
-                                android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                                android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                                 android:text="Ask passenger for OTP to start job"
                                 android:textColor="@color/gray_500" android:textSize="12sp"/>
@@ -266,7 +266,7 @@
                             android:text="0"
                             android:textSize="26sp" android:textStyle="bold"
                             android:textColor="@color/hc_blue"
-                            android:fontFamily="@font/nunito_bold"/>
+                            android:fontFamily="sans-serif-medium"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Today's Trips"
                             android:textColor="@color/gray_400" android:textSize="11sp"/>
@@ -288,7 +288,7 @@
                             android:text="₹0"
                             android:textSize="26sp" android:textStyle="bold"
                             android:textColor="@color/hc_orange"
-                            android:fontFamily="@font/nunito_bold"/>
+                            android:fontFamily="sans-serif-medium"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Today's Earnings"
                             android:textColor="@color/gray_400" android:textSize="11sp"/>

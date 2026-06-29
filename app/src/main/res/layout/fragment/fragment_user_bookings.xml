@@ -9,7 +9,7 @@
         android:paddingTop="48dp" android:paddingBottom="20dp">
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="My Bookings 📋" android:textColor="@color/white"
-            android:textSize="24sp" android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+            android:textSize="24sp" android:textStyle="bold" android:fontFamily="sans-serif-medium"
             android:layout_marginBottom="4dp"/>
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="All your past and upcoming trips" android:textColor="#FFFFFFBB"

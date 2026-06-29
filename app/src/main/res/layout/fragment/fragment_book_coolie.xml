@@ -25,7 +25,7 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="Book a Porter"
                     android:textColor="@color/white" android:textSize="20sp"
-                    android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                    android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="Fill details below"
                     android:textColor="#FFFFFFBB" android:textSize="12sp"/>
@@ -48,7 +48,7 @@
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="👤  Traveller Details"
                         android:textColor="@color/gray_900" android:textSize="15sp"
-                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:textStyle="bold" android:fontFamily="sans-serif-medium"
                         android:layout_marginBottom="14dp"/>
 
                     <!-- Booking for -->
@@ -170,7 +170,7 @@
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="🚂  Train Details"
                         android:textColor="@color/gray_900" android:textSize="15sp"
-                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:textStyle="bold" android:fontFamily="sans-serif-medium"
                         android:layout_marginBottom="14dp"/>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -239,7 +239,7 @@
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="🧳  Baggage Details"
                         android:textColor="@color/gray_900" android:textSize="15sp"
-                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:textStyle="bold" android:fontFamily="sans-serif-medium"
                         android:layout_marginBottom="14dp"/>
 
                     <!-- Bag counter -->
@@ -263,7 +263,7 @@
                                 android:layout_width="52dp" android:layout_height="36dp"
                                 android:text="1" android:textSize="20sp" android:textStyle="bold"
                                 android:textColor="@color/gray_900" android:gravity="center"
-                                android:fontFamily="@font/nunito_bold"/>
+                                android:fontFamily="sans-serif-medium"/>
                             <Button android:id="@+id/btn_bag_plus"
                                 android:layout_width="36dp" android:layout_height="36dp"
                                 android:text="+" android:textSize="20sp" android:textColor="@color/white"
@@ -358,7 +358,7 @@
                             android:layout_weight="1"
                             android:text="💰  Fare Breakdown"
                             android:textColor="@color/gray_900" android:textSize="15sp"
-                            android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                            android:textStyle="bold" android:fontFamily="sans-serif-medium"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Live price" android:textColor="@color/hc_green"
                             android:textSize="11sp" android:textStyle="bold"
@@ -429,7 +429,7 @@
                                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                                 android:text="₹80" android:textColor="@color/hc_orange"
                                 android:textSize="22sp" android:textStyle="bold"
-                                android:fontFamily="@font/nunito_bold"/>
+                                android:fontFamily="sans-serif-medium"/>
                         </LinearLayout>
 
                         <TextView android:id="@+id/tv_porter_amount"
@@ -453,7 +453,7 @@
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                         android:text="💳  Payment Method"
                         android:textColor="@color/gray_900" android:textSize="15sp"
-                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:textStyle="bold" android:fontFamily="sans-serif-medium"
                         android:layout_marginBottom="12dp"/>
                     <RadioGroup android:id="@+id/rg_payment"
                         android:layout_width="match_parent" android:layout_height="wrap_content"
@@ -476,7 +476,7 @@
                 android:layout_width="match_parent" android:layout_height="60dp"
                 android:text="🧳  Book Porter Now"
                 android:textColor="@color/white" android:textSize="18sp"
-                android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                android:textStyle="bold" android:fontFamily="sans-serif-medium"
                 android:background="@drawable/ripple_orange"
                 android:stateListAnimator="@null" android:elevation="8dp"
                 android:layout_marginBottom="32dp"/>
