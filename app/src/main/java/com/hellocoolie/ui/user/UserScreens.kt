@@ -286,7 +286,9 @@ class BookCoolieFragment : Fragment() {
 
         binding.btnBookNow.setOnClickListener { submitBooking() }
 
-        viewModel.uiState.observe(viewLifecycleOwner) { state ->
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.uiState.collect { state ->
             when (state) {
                 is UserUiState.Loading -> { binding.btnBookNow.isEnabled = false; binding.btnBookNow.text = "Booking..." }
                 is UserUiState.BookingCreated -> {
@@ -367,7 +369,6 @@ class BookCoolieFragment : Fragment() {
         val station        = binding.etStation.text?.toString()?.trim() ?: ""
         val trainNo        = binding.etTrainNo.text?.toString()?.trim()
         val coach          = binding.etCoach.text?.toString()?.trim()
-        val seatNo         = binding.etSeat.text?.toString()?.trim()
 
         if (travellerName.isEmpty() || travellerPhone.isEmpty() || station.isEmpty()) {
             toast("Fill traveller name, phone, and station"); return
@@ -384,12 +385,12 @@ class BookCoolieFragment : Fragment() {
             isWomanSolo     = isWomanSolo,
             trainNo         = trainNo,
             trainName       = null,
-            fromStation     = binding.etFromStation.text?.toString()?.trim(),
-            toStation       = binding.etToStation.text?.toString()?.trim(),
+            fromStation     = null,
+            toStation       = null,
             arrivalStation  = station,
-            arrivalTime     = binding.etArrivalTime.text?.toString()?.trim(),
+            arrivalTime     = null,
             coach           = coach,
-            seatNo          = seatNo,
+            seatNo          = binding.etPnr.text?.toString()?.trim(),
             pnr             = binding.etPnr.text?.toString()?.trim(),
             bagCount        = bagCount,
             bagWeight       = selectedBagWeight,
