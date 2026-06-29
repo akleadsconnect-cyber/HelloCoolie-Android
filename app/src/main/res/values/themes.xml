@@ -21,6 +21,8 @@
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:navigationBarColor">@color/hc_orange</item>
         <item name="android:windowBackground">@drawable/bg_gradient_orange_blue</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
     </style>
 
     <!-- Buttons -->
