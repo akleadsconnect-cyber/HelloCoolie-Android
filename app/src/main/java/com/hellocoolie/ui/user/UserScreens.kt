@@ -289,22 +289,26 @@ class BookCoolieFragment : Fragment() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.uiState.collect { state ->
-            when (state) {
-                is UserUiState.Loading -> { binding.btnBookNow.isEnabled = false; binding.btnBookNow.text = "Booking..." }
-                is UserUiState.BookingCreated -> {
-                    // Show searching dialog
-                    parentFragmentManager.beginTransaction()
-                        .replace(android.R.id.content, BookingSearchingFragment.newInstance(state.response.bookingId))
-                        .addToBackStack(null)
-                        .commit()
+                    when (state) {
+                        is UserUiState.Loading -> { binding.btnBookNow.isEnabled = false; binding.btnBookNow.text = "Booking..." }
+                        is UserUiState.BookingCreated -> {
+                            parentFragmentManager.beginTransaction()
+                                .replace(android.R.id.content, BookingSearchingFragment.newInstance(state.response.bookingId))
+                                .addToBackStack(null).commit()
+                        }
+                        is UserUiState.Error -> { binding.btnBookNow.isEnabled = true; binding.btnBookNow.text = getString(R.string.book_now); toast(state.message) }
+                        else -> { binding.btnBookNow.isEnabled = true; binding.btnBookNow.text = getString(R.string.book_now) }
+                    }
                 }
-                is UserUiState.Error -> { binding.btnBookNow.isEnabled = true; binding.btnBookNow.text = getString(R.string.book_now); toast(state.message) }
-                else -> { binding.btnBookNow.isEnabled = true; binding.btnBookNow.text = getString(R.string.book_now) }
             }
         }
 
-        viewModel.farePreview.observe(viewLifecycleOwner) { fare ->
-            fare?.let { updateFareUI(it) }
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.farePreview.collect { fare ->
+                    fare?.let { updateFareUI(it) }
+                }
+            }
         }
     }
 
