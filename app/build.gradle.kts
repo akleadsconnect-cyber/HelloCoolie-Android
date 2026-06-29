@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace         = "in.hellocoolie"
+    namespace = "com.hellocoolie"
     compileSdk        = 34
 
     defaultConfig {
-        applicationId = "in.hellocoolie"
+        applicationId = "com.hellocoolie"
         minSdk        = 24
         targetSdk     = 34
         versionCode   = 1

@@ -1,4 +1,4 @@
-package in.hellocoolie.data.api
+package com.hellocoolie.data.api
 
 import android.content.Context
 import dagger.Module
@@ -6,8 +6,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import in.hellocoolie.BuildConfig
-import in.hellocoolie.utils.TokenManager
+import com.hellocoolie.BuildConfig
+import com.hellocoolie.utils.TokenManager
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

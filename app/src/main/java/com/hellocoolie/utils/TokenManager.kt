@@ -1,12 +1,12 @@
-package in.hellocoolie.utils
+package com.hellocoolie.utils
 
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
 import com.google.gson.Gson
-import in.hellocoolie.data.model.Porter
-import in.hellocoolie.data.model.User
+import com.hellocoolie.data.model.Porter
+import com.hellocoolie.data.model.User
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.runBlocking

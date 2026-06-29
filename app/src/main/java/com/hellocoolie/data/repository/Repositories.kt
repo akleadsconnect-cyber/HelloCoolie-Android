@@ -1,10 +1,10 @@
-package in.hellocoolie.data.repository
+package com.hellocoolie.data.repository
 
-import in.hellocoolie.data.api.HelloCoolieApi
-import in.hellocoolie.data.model.*
-import in.hellocoolie.utils.Result
-import in.hellocoolie.utils.TokenManager
-import in.hellocoolie.utils.safeApiCall
+import com.hellocoolie.data.api.HelloCoolieApi
+import com.hellocoolie.data.model.*
+import com.hellocoolie.utils.Result
+import com.hellocoolie.utils.TokenManager
+import com.hellocoolie.utils.safeApiCall
 import javax.inject.Inject
 import javax.inject.Singleton
 

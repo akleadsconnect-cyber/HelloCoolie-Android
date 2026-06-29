@@ -1,4 +1,4 @@
-package in.hellocoolie.data.model
+package com.hellocoolie.data.model
 
 import com.google.gson.annotations.SerializedName
 

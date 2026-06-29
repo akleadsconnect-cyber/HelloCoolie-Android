@@ -1,6 +1,6 @@
-package in.hellocoolie.data.api
+package com.hellocoolie.data.api
 
-import in.hellocoolie.data.model.*
+import com.hellocoolie.data.model.*
 import retrofit2.Response
 import retrofit2.http.*
 

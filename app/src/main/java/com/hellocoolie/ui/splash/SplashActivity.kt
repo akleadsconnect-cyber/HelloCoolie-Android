@@ -1,4 +1,4 @@
-package in.hellocoolie.ui.splash
+package com.hellocoolie.ui.splash
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,10 +6,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
-import in.hellocoolie.data.repository.AuthRepository
-import in.hellocoolie.ui.auth.AuthActivity
-import in.hellocoolie.ui.porter.PorterMainActivity
-import in.hellocoolie.ui.user.UserMainActivity
+import com.hellocoolie.data.repository.AuthRepository
+import com.hellocoolie.ui.auth.AuthActivity
+import com.hellocoolie.ui.porter.PorterMainActivity
+import com.hellocoolie.ui.user.UserMainActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject

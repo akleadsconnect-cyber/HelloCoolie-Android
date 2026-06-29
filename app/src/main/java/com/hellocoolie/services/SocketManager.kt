@@ -1,10 +1,10 @@
-package in.hellocoolie.services
+package com.hellocoolie.services
 
 import android.util.Log
 import com.google.gson.Gson
-import in.hellocoolie.BuildConfig
-import in.hellocoolie.data.model.NewBookingRequest
-import in.hellocoolie.utils.TokenManager
+import com.hellocoolie.BuildConfig
+import com.hellocoolie.data.model.NewBookingRequest
+import com.hellocoolie.utils.TokenManager
 import io.socket.client.IO
 import io.socket.client.Socket
 import org.json.JSONObject

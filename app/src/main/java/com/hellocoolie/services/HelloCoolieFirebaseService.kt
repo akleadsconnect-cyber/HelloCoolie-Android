@@ -1,13 +1,13 @@
-package in.hellocoolie.services
+package com.hellocoolie.services
 
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Intent
 import androidx.core.app.NotificationCompat
-import in.hellocoolie.HelloCoolieApp
-import in.hellocoolie.R
-import in.hellocoolie.ui.user.UserMainActivity
-import in.hellocoolie.utils.TokenManager
+import com.hellocoolie.HelloCoolieApp
+import com.hellocoolie.R
+import com.hellocoolie.ui.user.UserMainActivity
+import com.hellocoolie.utils.TokenManager
 import javax.inject.Inject
 
 // FCM Service — requires google-services.json to activate

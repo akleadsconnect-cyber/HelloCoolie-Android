@@ -1,4 +1,4 @@
-package in.hellocoolie.ui.porter
+package com.hellocoolie.ui.porter
 
 import android.content.Intent
 import android.media.AudioAttributes
@@ -21,15 +21,15 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
-import in.hellocoolie.R
-import in.hellocoolie.data.model.*
-import in.hellocoolie.data.repository.AuthRepository
-import in.hellocoolie.data.repository.PorterRepository
-import in.hellocoolie.databinding.*
-import in.hellocoolie.services.SocketManager
-import in.hellocoolie.ui.auth.AuthActivity
-import in.hellocoolie.utils.Result
-import in.hellocoolie.utils.TokenManager
+import com.hellocoolie.R
+import com.hellocoolie.data.model.*
+import com.hellocoolie.data.repository.AuthRepository
+import com.hellocoolie.data.repository.PorterRepository
+import com.hellocoolie.databinding.*
+import com.hellocoolie.services.SocketManager
+import com.hellocoolie.ui.auth.AuthActivity
+import com.hellocoolie.utils.Result
+import com.hellocoolie.utils.TokenManager
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

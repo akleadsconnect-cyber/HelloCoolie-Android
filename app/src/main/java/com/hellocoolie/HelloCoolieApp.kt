@@ -1,4 +1,4 @@
-package in.hellocoolie
+package com.hellocoolie
 
 import android.app.Application
 import android.app.NotificationChannel

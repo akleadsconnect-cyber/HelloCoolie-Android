@@ -1,4 +1,4 @@
-package in.hellocoolie.ui.auth
+package com.hellocoolie.ui.auth
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,12 +15,12 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
-import in.hellocoolie.data.model.*
-import in.hellocoolie.data.repository.AuthRepository
-import in.hellocoolie.databinding.*
-import in.hellocoolie.ui.porter.PorterMainActivity
-import in.hellocoolie.ui.user.UserMainActivity
-import in.hellocoolie.utils.Result
+import com.hellocoolie.data.model.*
+import com.hellocoolie.data.repository.AuthRepository
+import com.hellocoolie.databinding.*
+import com.hellocoolie.ui.porter.PorterMainActivity
+import com.hellocoolie.ui.user.UserMainActivity
+import com.hellocoolie.utils.Result
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
