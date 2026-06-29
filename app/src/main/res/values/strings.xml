@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelloCoolie</string>
+    <string name="tagline">Your Porter, Just a Hello Away!</string>
+
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="phone_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="verify">Verify</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_in_as_user">Sign in as Passenger</string>
+    <string name="sign_in_as_porter">Sign in as Porter</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="already_account">Already have an account?</string>
+
+    <!-- User -->
+    <string name="book_coolie">Book Porter</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="booking_for">Booking for</string>
+    <string name="myself">Myself</string>
+    <string name="other_person">Someone Else</string>
+    <string name="enter_pnr">Enter PNR Number</string>
+    <string name="num_bags">Number of Bags</string>
+    <string name="bag_weight">Bag Weight</string>
+    <string name="drop_location">Drop Location</string>
+    <string name="platform_only">Platform Only</string>
+    <string name="station_exit">Station Exit</string>
+    <string name="auto_stand">Auto Stand</string>
+    <string name="senior_citizen">Senior Citizen</string>
+    <string name="woman_travelling_alone">Woman Travelling Alone</string>
+    <string name="fare_breakdown">Fare Breakdown</string>
+    <string name="book_now">Book Now</string>
+    <string name="pay_online">Pay Online</string>
+    <string name="pay_cash">Pay Cash</string>
+    <string name="searching_porter">Searching for porter\u2026</string>
+    <string name="porter_found">Porter Found!</string>
+    <string name="show_otp_to_porter">Show this OTP to your porter</string>
+    <string name="job_in_progress">Job in Progress</string>
+    <string name="rate_porter">Rate Your Porter</string>
+    <string name="sos">SOS Emergency</string>
+    <string name="cancel_booking">Cancel Booking</string>
+
+    <!-- Porter -->
+    <string name="go_online">Go Online</string>
+    <string name="go_offline">Go Offline</string>
+    <string name="new_booking">New Booking!</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="navigate_to_coach">Navigate to Coach</string>
+    <string name="enter_otp_hint">Enter OTP from passenger</string>
+    <string name="start_job">Start Job</string>
+    <string name="mark_complete">Mark Complete</string>
+    <string name="my_earnings">My Earnings</string>
+    <string name="today_earnings">Today\'s Earnings</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="offer_trolley">Offer Trolley Service</string>
+
+    <!-- Bag weights -->
+    <string name="weight_normal">Normal (up to 15kg)</string>
+    <string name="weight_medium">Medium (15–25kg)</string>
+    <string name="weight_heavy">Heavy (25–35kg)</string>
+    <string name="weight_very_heavy">Very Heavy (35kg+)</string>
+
+    <!-- Statuses -->
+    <string name="status_pending">Pending</string>
+    <string name="status_accepted">Accepted</string>
+    <string name="status_in_progress">In Progress</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="status_expired">Expired</string>
+
+    <!-- Error messages -->
+    <string name="error_network">No internet connection. Please check and try again.</string>
+    <string name="error_fill_all">Please fill all required fields.</string>
+    <string name="error_invalid_phone">Please enter a valid 10-digit mobile number.</string>
+    <string name="error_password_short">Password must be at least 6 characters.</string>
+    <string name="error_password_mismatch">Passwords do not match.</string>
+
+    <!-- Misc -->
+    <string name="loading">Loading\u2026</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="back">Back</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="hindi">हिंदी</string>
+    <string name="english">English</string>
+    <string name="version">Version</string>
+</resources>

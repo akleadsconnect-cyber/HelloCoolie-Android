@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base HelloCoolie Theme -->
+    <style name="Theme.HelloCoolie" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/hc_orange</item>
+        <item name="colorPrimaryDark">@color/hc_orange_dark</item>
+        <item name="colorAccent">@color/hc_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/hc_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorBackground">@color/gray_50</item>
+        <item name="android:colorBackground">@color/gray_50</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <!-- Splash screen -->
+    <style name="Theme.HelloCoolie.Splash" parent="Theme.HelloCoolie">
+        <item name="android:statusBarColor">@color/hc_orange</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/hc_orange</item>
+    </style>
+
+    <!-- Auth -->
+    <style name="Theme.HelloCoolie.Auth" parent="Theme.HelloCoolie">
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="Widget.HelloCoolie.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/hc_orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <style name="Widget.HelloCoolie.Button.Blue" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/hc_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <style name="Widget.HelloCoolie.Button.Ghost" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/gray_200</item>
+        <item name="android:textColor">@color/gray_700</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- Cards -->
+    <style name="Widget.HelloCoolie.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="strokeColor">@color/gray_100</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- TextInput -->
+    <style name="Widget.HelloCoolie.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/gray_200</item>
+        <item name="boxStrokeWidth">1.5dp</item>
+        <item name="hintTextColor">@color/gray_500</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+    </style>
+
+    <!-- Status badge text styles -->
+    <style name="Widget.HelloCoolie.Badge.Green">
+        <item name="android:background">@drawable/badge_green_bg</item>
+        <item name="android:textColor">@color/hc_green</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <!-- Typography -->
+    <style name="TextAppearance.HelloCoolie.Display" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textColor">@color/gray_900</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HelloCoolie.Headline">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/gray_900</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HelloCoolie.Label">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/gray_500</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.HelloCoolie.Amount">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/hc_orange</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
