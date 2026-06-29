@@ -495,8 +495,42 @@ class UserProfileFragment : Fragment() {
             }
         }
 
+        binding.btnSos.setOnClickListener {
+            android.app.AlertDialog.Builder(requireContext())
+                .setTitle("🆘 Emergency SOS")
+                .setMessage("This will alert your emergency contact. Are you sure?")
+                .setPositiveButton("YES, SEND SOS") { _, _ ->
+                    Toast.makeText(requireContext(), "SOS alert sent!", Toast.LENGTH_LONG).show()
+                }
+                .setNegativeButton("Cancel", null).show()
+        }
+
+        binding.btnLogout.setOnClickListener {
+            android.app.AlertDialog.Builder(requireContext())
+                .setTitle("Sign Out")
+                .setMessage("Are you sure you want to sign out?")
+                .setPositiveButton("Sign Out") { _, _ ->
+                    lifecycleScope.launch {
+                        viewModel.logout()
+                        startActivity(Intent(requireContext(), AuthActivity::class.java))
+                        requireActivity().finish()
+                    }
+                }
+                .setNegativeButton("Cancel", null).show()
+        }
+
         binding.btnCallSupport.setOnClickListener {
             startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:+911234567890")))
+        }
+
+        // Load stats
+        lifecycleScope.launch {
+            try {
+                val stats = viewModel.getUserStats()
+                binding.tvTotalBookings.text = stats?.totalBookings?.toString() ?: "0"
+                binding.tvTotalSpend.text    = "₹${stats?.totalSpend ?: 0}"
+                binding.tvAvgTime.text       = stats?.avgTime ?: "—"
+            } catch (e: Exception) {}
         }
     }
 

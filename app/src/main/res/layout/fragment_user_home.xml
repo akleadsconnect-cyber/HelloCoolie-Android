@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- HEADER with Logo -->
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,13 +22,12 @@
             android:paddingTop="40dp"
             android:paddingBottom="32dp">
 
-            <!-- Logo centered -->
+            <!-- Logo -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginBottom="16dp">
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -44,7 +43,6 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <!-- Welcome text -->
             <TextView
                 android:id="@+id/tv_welcome"
                 android:layout_width="match_parent"
@@ -72,7 +70,6 @@
                 app:cardCornerRadius="16dp"
                 app:cardElevation="12dp"
                 app:cardBackgroundColor="@color/white">
-
                 <LinearLayout
                     android:id="@+id/btn_book_coolie"
                     android:layout_width="match_parent"
@@ -83,71 +80,39 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="🧳"
-                        android:textSize="32sp"
-                        android:layout_marginEnd="14dp"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🧳" android:textSize="32sp" android:layout_marginEnd="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Book a Porter"
-                            android:textColor="@color/gray_900"
-                            android:textSize="18sp"
-                            android:textStyle="bold"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_900" android:textSize="18sp" android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="Instant booking at your station"
-                            android:textColor="@color/gray_400"
-                            android:textSize="12sp"/>
+                            android:textColor="@color/gray_400" android:textSize="12sp"/>
                     </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="@color/hc_orange"/>
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right" app:tint="@color/hc_orange"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-        <!-- Content -->
+        <!-- CONTENT -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Quick stats -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="20dp">
+            <!-- Stats cards -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="16dp">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="8dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardElevation="2dp"
-                    app:cardBackgroundColor="@color/white">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="14dp"
-                        android:gravity="center">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="💰" android:textSize="22sp" android:layout_marginBottom="4dp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -158,20 +123,11 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginHorizontal="4dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardElevation="2dp"
-                    app:cardBackgroundColor="@color/white">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="14dp"
-                        android:gravity="center">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginHorizontal="4dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="⏱️" android:textSize="22sp" android:layout_marginBottom="4dp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -182,20 +138,11 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="8dp"
-                    app:cardCornerRadius="14dp"
-                    app:cardElevation="2dp"
-                    app:cardBackgroundColor="@color/white">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="14dp"
-                        android:gravity="center">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="8dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                             android:text="⭐" android:textSize="22sp" android:layout_marginBottom="4dp"/>
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -206,104 +153,6 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
-
-            <!-- How it works -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="How it works"
-                android:textColor="@color/gray_900"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="12dp"/>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="@color/white">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="14dp">
-                        <TextView android:layout_width="36dp" android:layout_height="36dp"
-                            android:text="1" android:textSize="16sp" android:textStyle="bold"
-                            android:textColor="@color/hc_orange" android:gravity="center"
-                            android:background="@drawable/card_orange_bg" android:layout_marginEnd="12dp"/>
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Enter train &amp; bag details" android:textColor="@color/gray_900"
-                                android:textSize="14sp" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="PNR, coach, number of bags" android:textColor="@color/gray_400" android:textSize="12sp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="14dp">
-                        <TextView android:layout_width="36dp" android:layout_height="36dp"
-                            android:text="2" android:textSize="16sp" android:textStyle="bold"
-                            android:textColor="@color/hc_orange" android:gravity="center"
-                            android:background="@drawable/card_orange_bg" android:layout_marginEnd="12dp"/>
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Porter accepts in 30 seconds" android:textColor="@color/gray_900"
-                                android:textSize="14sp" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Nearest verified porter is notified" android:textColor="@color/gray_400" android:textSize="12sp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="14dp">
-                        <TextView android:layout_width="36dp" android:layout_height="36dp"
-                            android:text="3" android:textSize="16sp" android:textStyle="bold"
-                            android:textColor="@color/hc_orange" android:gravity="center"
-                            android:background="@drawable/card_orange_bg" android:layout_marginEnd="12dp"/>
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Show OTP to porter" android:textColor="@color/gray_900"
-                                android:textSize="14sp" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Verify identity before handing bags" android:textColor="@color/gray_400" android:textSize="12sp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="horizontal" android:gravity="center_vertical">
-                        <TextView android:layout_width="36dp" android:layout_height="36dp"
-                            android:text="4" android:textSize="16sp" android:textStyle="bold"
-                            android:textColor="@color/hc_orange" android:gravity="center"
-                            android:background="@drawable/card_orange_bg" android:layout_marginEnd="12dp"/>
-                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Relax!" android:textColor="@color/gray_900"
-                                android:textSize="14sp" android:textStyle="bold"/>
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:text="Porter carries your bags to destination" android:textColor="@color/gray_400" android:textSize="12sp"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- SOS Button -->
-            <Button
-                android:id="@+id/btn_sos"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="🆘  Emergency SOS"
-                android:textColor="@color/hc_red"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:background="@drawable/card_red_bg"
-                android:stateListAnimator="@null"
-                android:layout_marginBottom="80dp"/>
 
         </LinearLayout>
     </LinearLayout>
