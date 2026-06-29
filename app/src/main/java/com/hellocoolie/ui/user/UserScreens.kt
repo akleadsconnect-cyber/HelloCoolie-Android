@@ -105,8 +105,13 @@ class UserViewModel @Inject constructor(
     suspend fun getUserStats(): UserStats? = try {
         val r = bookingRepository.getMyBookings()
         if (r is Result.Success) {
-            val list = r.data
-            UserStats(list.size, list.sumOf { it.totalAmount?.toIntOrNull() ?: 0 }, "—")
+            @Suppress("UNCHECKED_CAST")
+            val bookings = (r.data["bookings"] as? List<Map<String, Any>>) ?: emptyList()
+            val total = bookings.size
+            val spend = bookings.sumOf { b ->
+                (b["total_amount"] as? Number)?.toInt() ?: 0
+            }
+            UserStats(total, spend, "—")
         } else null
     } catch (e: Exception) { null }
 }
