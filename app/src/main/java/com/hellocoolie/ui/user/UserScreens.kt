@@ -99,7 +99,6 @@ class UserViewModel @Inject constructor(
     }
 
     fun logout() = viewModelScope.launch { authRepository.logout() }
-}
 
     data class UserStats(val totalBookings: Int, val totalSpend: Int, val avgTime: String)
 
