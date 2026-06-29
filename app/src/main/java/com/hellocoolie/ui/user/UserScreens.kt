@@ -224,7 +224,6 @@ class UserHomeFragment : Fragment() {
                 .commit()
         }
 
-        binding.btnSos.setOnClickListener { showSosConfirm() }
     }
 
     private fun showSosConfirm() {
