@@ -121,9 +121,9 @@ class UserMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityUserMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        socketManager.connect()
+        try { socketManager.connect() } catch (e: Exception) { }
         setupNavigation()
-        setupSocketListeners()
+        try { setupSocketListeners() } catch (e: Exception) { }
     }
 
     private fun setupNavigation() {
@@ -136,6 +136,7 @@ class UserMainActivity : AppCompatActivity() {
             true
         }
         showFragment(UserHomeFragment())
+        binding.bottomNav.selectedItemId = R.id.nav_home
     }
 
     private fun showFragment(f: Fragment) {
