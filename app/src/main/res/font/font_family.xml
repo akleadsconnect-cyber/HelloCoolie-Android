@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Font files needed — download and add to res/font/:
+    - inter.ttf           (https://fonts.google.com/specimen/Inter)
+    - inter_medium.ttf
+    - inter_semibold.ttf
+    - nunito_bold.ttf     (https://fonts.google.com/specimen/Nunito)
+    - nunito_extrabold.ttf
+    - nunito_black.ttf
+
+    OR use downloadable fonts in build.gradle:
+    implementation("androidx.core:core-google-shortcuts:1.0.1")
+-->
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <font
+        android:font="@font/inter"
+        android:fontWeight="400"
+        android:fontStyle="normal"
+        app:font="@font/inter"
+        app:fontWeight="400"
+        app:fontStyle="normal"/>
+
+</font-family>

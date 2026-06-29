@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_50">
+
+    <!-- TOP HEADER CARD - Orange gradient -->
+    <LinearLayout
+        android:id="@+id/header_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_orange_blue"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <!-- Porter name + badge row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Avatar circle -->
+            <FrameLayout
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="14dp">
+                <View android:layout_width="52dp" android:layout_height="52dp"
+                    android:background="@drawable/circle_orange"/>
+                <TextView
+                    android:id="@+id/tv_avatar_letter"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:text="R"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+            </FrameLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tv_porter_name"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Ramesh Kumar"
+                    android:textColor="@color/white" android:textSize="18sp"
+                    android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                <TextView android:id="@+id/tv_porter_badge"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Badge: NDLS-245"
+                    android:textColor="#FFFFFFBB" android:textSize="13sp"/>
+            </LinearLayout>
+
+            <!-- Rating -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="#33FFFFFF" android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp" android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="★ " android:textColor="#FFD700" android:textSize="14sp"/>
+                <TextView android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="4.9" android:textColor="@color/white"
+                    android:textSize="14sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Station info -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📍 " android:textSize="14sp"/>
+            <TextView android:id="@+id/tv_porter_station"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="New Delhi Railway Station"
+                android:textColor="#FFFFFFCC" android:textSize="13sp"/>
+        </LinearLayout>
+
+        <!-- ONLINE TOGGLE - Big prominent -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="20dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/tv_online_status"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🔴 Offline — Tap to go online"
+                        android:textColor="@color/gray_700"
+                        android:textSize="15sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Toggle to receive booking requests"
+                        android:textColor="@color/gray_400" android:textSize="12sp"/>
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="1.3"
+                    android:scaleY="1.3"
+                    app:thumbTint="@color/white"
+                    app:trackTint="@drawable/toggle_online_track"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- SCROLLABLE CONTENT -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="290dp"
+        android:clipToPadding="false"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp">
+
+            <!-- OTP CARD (hidden by default, shows when booking accepted) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:strokeColor="@color/hc_orange"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🔑" android:textSize="22sp" android:layout_marginEnd="10dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Booking Accepted!"
+                                android:textColor="@color/hc_orange" android:textSize="16sp"
+                                android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Ask passenger for OTP to start job"
+                                android:textColor="@color/gray_500" android:textSize="12sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- OTP Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        app:hintEnabled="false">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_otp"
+                            android:layout_width="match_parent" android:layout_height="60dp"
+                            android:inputType="number" android:maxLength="6"
+                            android:hint="Enter 6-digit OTP"
+                            android:textSize="24sp" android:textStyle="bold"
+                            android:gravity="center" android:textColor="@color/gray_900"
+                            android:letterSpacing="0.3"
+                            android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button android:id="@+id/btn_verify_otp"
+                        android:layout_width="match_parent" android:layout_height="52dp"
+                        android:text="✓ Verify OTP &amp; Start Job"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:background="@drawable/btn_orange"
+                        android:stateListAnimator="@null"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ACTIVE JOB CARD (hidden by default) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_job_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                app:strokeColor="@color/hc_green"
+                app:strokeWidth="2dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+
+                    <!-- Status bar -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:background="@drawable/card_green_bg" android:paddingHorizontal="16dp"
+                        android:paddingVertical="10dp" android:orientation="horizontal"
+                        android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                        <View android:layout_width="8dp" android:layout_height="8dp"
+                            android:background="@drawable/circle_green" android:layout_marginEnd="8dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Job in Progress"
+                            android:textColor="@color/hc_green" android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Carry luggage carefully to the destination"
+                        android:textColor="@color/gray_600" android:textSize="13sp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <Button android:id="@+id/btn_complete"
+                        android:layout_width="match_parent" android:layout_height="52dp"
+                        android:text="✓ Mark Job Complete"
+                        android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold"
+                        android:background="@drawable/btn_blue"
+                        android:stateListAnimator="@null"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- TODAY'S QUICK STATS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Bookings today -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="📋" android:textSize="22dp" android:layout_marginBottom="6dp"/>
+                        <TextView android:id="@+id/tv_today_trips"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="26sp" android:textStyle="bold"
+                            android:textColor="@color/hc_blue"
+                            android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Today's Trips"
+                            android:textColor="@color/gray_400" android:textSize="11sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Today earnings -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="8dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="💰" android:textSize="22dp" android:layout_marginBottom="6dp"/>
+                        <TextView android:id="@+id/tv_today_earnings"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="₹0"
+                            android:textSize="26sp" android:textStyle="bold"
+                            android:textColor="@color/hc_orange"
+                            android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Today's Earnings"
+                            android:textColor="@color/gray_400" android:textSize="11sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- TIPS CARD -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/hc_blue_bg"
+                app:strokeColor="@color/hc_blue_border"
+                app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="💡 Tips to earn more"
+                        android:textColor="@color/hc_blue" android:textSize="13sp"
+                        android:textStyle="bold" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="• Stay online during peak hours (6–10 AM, 4–9 PM)\n• Handle luggage carefully for better ratings\n• Be polite — senior citizens &amp; women get priority"
+                        android:textColor="@color/hc_blue_dark" android:textSize="12sp"
+                        android:lineSpacingExtra="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SOS BUTTON -->
+            <Button
+                android:id="@+id/btn_sos"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🆘  SOS Emergency"
+                android:textColor="@color/hc_red"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="@drawable/card_red_bg"
+                android:stateListAnimator="@null"
+                android:layout_marginBottom="8dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

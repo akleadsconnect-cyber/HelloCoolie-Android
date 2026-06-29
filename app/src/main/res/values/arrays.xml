@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="gender_options">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+        <item>Prefer not to say</item>
+    </string-array>
+    <string-array name="bag_weight_options">
+        <item>Normal (up to 15kg)</item>
+        <item>Medium (15–25kg)</item>
+        <item>Heavy (25–35kg)</item>
+        <item>Very Heavy (35kg+)</item>
+    </string-array>
+</resources>

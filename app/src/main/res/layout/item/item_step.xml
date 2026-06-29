@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <FrameLayout android:layout_width="40dp" android:layout_height="40dp"
+        android:layout_marginEnd="14dp">
+        <View android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_orange_bg"/>
+        <TextView android:id="@+id/tv_step_icon"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:text="1" android:textSize="18sp"
+            android:gravity="center" android:textColor="@color/hc_orange"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tv_step_title"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Book your porter"
+            android:textColor="@color/gray_900" android:textSize="14sp"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/tv_step_desc"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Enter PNR and bag details"
+            android:textColor="@color/gray_400" android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>

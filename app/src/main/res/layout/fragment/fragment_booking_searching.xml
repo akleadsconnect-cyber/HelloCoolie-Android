@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gradient_orange_blue"
+    android:gravity="center">
+
+    <!-- Lottie animation - searching radar -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_searching"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/searching_animation"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Booking ID -->
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:background="#33FFFFFF" android:paddingHorizontal="18dp"
+        android:paddingVertical="8dp" android:layout_marginBottom="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:id="@+id/tv_booking_id"
+            android:text="Booking ID: BK202600001"
+            android:textColor="@color/white" android:textSize="12sp"
+            android:fontFamily="monospace" android:letterSpacing="0.04"/>
+    </LinearLayout>
+
+    <!-- Status text -->
+    <TextView android:id="@+id/tv_status"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Finding the best porter near you..."
+        android:textColor="@color/white" android:textSize="18sp"
+        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+        android:gravity="center" android:paddingHorizontal="40dp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Porter will be notified within 30 seconds"
+        android:textColor="#FFFFFFBB" android:textSize="13sp"
+        android:gravity="center" android:layout_marginBottom="48dp"/>
+
+    <!-- Timeline steps -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:paddingHorizontal="32dp"
+        android:gravity="center_vertical" android:layout_marginBottom="48dp">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <View android:layout_width="32dp" android:layout_height="32dp"
+                android:background="@drawable/circle_green" android:layout_marginBottom="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Booked" android:textColor="@color/white" android:textSize="10sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <View android:layout_width="0dp" android:layout_height="2dp" android:layout_weight="1"
+            android:background="#FFFFFF55"/>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <View android:layout_width="32dp" android:layout_height="32dp"
+                android:background="@drawable/circle_orange" android:layout_marginBottom="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Finding" android:textColor="@color/white" android:textSize="10sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <View android:layout_width="0dp" android:layout_height="2dp" android:layout_weight="1"
+            android:background="#FFFFFF33"/>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <View android:layout_width="32dp" android:layout_height="32dp"
+                android:background="#33FFFFFF" android:layout_marginBottom="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Assigned" android:textColor="#FFFFFF88" android:textSize="10sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <View android:layout_width="0dp" android:layout_height="2dp" android:layout_weight="1"
+            android:background="#FFFFFF33"/>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+            <View android:layout_width="32dp" android:layout_height="32dp"
+                android:background="#33FFFFFF" android:layout_marginBottom="6dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Done" android:textColor="#FFFFFF88" android:textSize="10sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Cancel button -->
+    <Button android:id="@+id/btn_cancel"
+        android:layout_width="200dp" android:layout_height="48dp"
+        android:text="Cancel Booking"
+        android:textColor="@color/hc_orange" android:textSize="14sp"
+        android:textStyle="bold" android:background="@color/white"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>

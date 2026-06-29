@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_50">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- GRADIENT HEADER -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_orange_blue"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="48dp" android:paddingBottom="28dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <ImageView android:id="@+id/btn_back"
+                    android:layout_width="36dp" android:layout_height="36dp"
+                    android:src="@drawable/ic_arrow_right" android:rotation="180"
+                    app:tint="@color/white" android:layout_marginEnd="12dp"
+                    android:clickable="true" android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Porter Registration"
+                        android:textColor="@color/white" android:textSize="22sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Join the HelloCoolie network"
+                        android:textColor="#FFFFFFBB" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Progress steps -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <View android:layout_width="28dp" android:layout_height="28dp"
+                    android:background="@drawable/circle_orange"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Personal" android:textColor="#FFFFFFBB" android:textSize="10sp"
+                    android:layout_marginStart="4dp"/>
+                <View android:layout_width="0dp" android:layout_height="2dp" android:layout_weight="1"
+                    android:background="#FFFFFF55" android:layout_marginHorizontal="6dp"/>
+                <View android:layout_width="28dp" android:layout_height="28dp"
+                    android:background="#FFFFFF33"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Work" android:textColor="#FFFFFF88" android:textSize="10sp"
+                    android:layout_marginStart="4dp"/>
+                <View android:layout_width="0dp" android:layout_height="2dp" android:layout_weight="1"
+                    android:background="#FFFFFF33" android:layout_marginHorizontal="6dp"/>
+                <View android:layout_width="28dp" android:layout_height="28dp"
+                    android:background="#FFFFFF33"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Payment" android:textColor="#FFFFFF88" android:textSize="10sp"
+                    android:layout_marginStart="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- FORM -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingTop="20dp">
+
+            <!-- SECTION 1: Personal Info -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👤  Personal Information"
+                        android:textColor="@color/gray_900" android:textSize="15sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Full Name -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange" android:hint="Full Name *">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_porter_name"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="textPersonName" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Phone -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange" android:hint="Mobile Number *">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_porter_phone"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="phone" android:maxLength="10" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Aadhaar -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="Aadhaar Number * (for password reset)">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_aadhaar"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="number" android:maxLength="12" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- DOB + Blood Group row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_marginEnd="8dp"
+                            style="@style/Widget.HelloCoolie.TextInput"
+                            app:boxStrokeColor="@color/hc_orange" android:hint="Date of Birth *">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_dob"
+                                android:layout_width="match_parent" android:layout_height="52dp"
+                                android:inputType="text" android:hint="YYYY-MM-DD"
+                                android:background="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_marginStart="8dp"
+                            style="@style/Widget.HelloCoolie.TextInput"
+                            app:boxStrokeColor="@color/hc_orange" android:hint="Blood Group">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_blood_group"
+                                android:layout_width="match_parent" android:layout_height="52dp"
+                                android:inputType="text" android:hint="A+, B+..."
+                                android:background="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <!-- Gender -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="GENDER" android:textSize="11sp" android:textStyle="bold"
+                        android:textColor="@color/gray_500" android:letterSpacing="0.08"
+                        android:layout_marginBottom="8dp"/>
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_gender"
+                        android:layout_width="match_parent" android:layout_height="52dp"
+                        android:background="@drawable/input_bg"
+                        android:entries="@array/gender_options"
+                        android:paddingHorizontal="14dp" android:layout_marginBottom="12dp"/>
+
+                    <!-- Address -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange" android:hint="Home Address">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_address"
+                            android:layout_width="match_parent" android:layout_height="72dp"
+                            android:inputType="textMultiLine" android:gravity="top"
+                            android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Emergency contact -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:startIconDrawable="@drawable/ic_phone"
+                        app:startIconTint="@color/hc_red"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="Emergency Contact * (family member)">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_emergency"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="phone" android:maxLength="10"
+                            android:background="@null" android:paddingStart="4dp"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SECTION 2: Work Details -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🏷️  Work Details"
+                        android:textColor="@color/gray_900" android:textSize="15sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:layout_marginBottom="16dp"/>
+
+                    <!-- Badge No -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="Railway Badge Number *">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_badge_no"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="textCapCharacters" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Station -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="Home Station *">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_station"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="textCapWords" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Experience -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="Years of Experience">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_experience"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="number" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Shift -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="SHIFT TYPE" android:textSize="11sp" android:textStyle="bold"
+                        android:textColor="@color/gray_500" android:letterSpacing="0.08"
+                        android:layout_marginBottom="10dp"/>
+                    <RadioGroup android:id="@+id/rg_shift"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <RadioButton android:id="@+id/radio_shift_8"
+                            android:layout_width="0dp" android:layout_height="48dp"
+                            android:layout_weight="1" android:text="8 Hours"
+                            android:textSize="14sp" android:checked="true"
+                            android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/radio_shift_12"
+                            android:layout_width="0dp" android:layout_height="48dp"
+                            android:layout_weight="1" android:text="12 Hours"
+                            android:textSize="14sp" android:buttonTint="@color/hc_orange"/>
+                    </RadioGroup>
+
+                    <!-- Shift times -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_marginEnd="8dp"
+                            style="@style/Widget.HelloCoolie.TextInput"
+                            app:boxStrokeColor="@color/hc_orange" android:hint="Shift Start">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_shift_start"
+                                android:layout_width="match_parent" android:layout_height="52dp"
+                                android:hint="06:00" android:background="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_marginStart="8dp"
+                            style="@style/Widget.HelloCoolie.TextInput"
+                            app:boxStrokeColor="@color/hc_orange" android:hint="Shift End">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_shift_end"
+                                android:layout_width="match_parent" android:layout_height="52dp"
+                                android:hint="14:00" android:background="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SECTION 3: Account & Payment -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🔐  Account &amp; Payment"
+                        android:textColor="@color/gray_900" android:textSize="15sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:layout_marginBottom="16dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:endIconMode="password_toggle"
+                        app:boxStrokeColor="@color/hc_orange" android:hint="Set Password *">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_porter_pass"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="textPassword" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange" android:hint="UPI ID (for payments)">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_upi"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="text" android:hint="yourname@upi"
+                            android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange" android:hint="WhatsApp Number">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_whatsapp"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="phone" android:maxLength="10" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Info notice -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_blue_bg" android:padding="14dp"
+                android:orientation="horizontal" android:layout_marginBottom="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="ℹ️" android:textSize="18sp" android:layout_marginEnd="10dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Your registration will be reviewed by our team. You will be notified within 24–48 hours once approved."
+                    android:textColor="@color/hc_blue_dark" android:textSize="12sp"
+                    android:lineSpacingExtra="3dp"/>
+            </LinearLayout>
+
+            <!-- Submit Button -->
+            <Button android:id="@+id/btn_porter_submit"
+                android:layout_width="match_parent" android:layout_height="60dp"
+                android:text="Submit Registration →"
+                android:textColor="@color/white" android:textSize="17sp"
+                android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                android:background="@drawable/btn_blue"
+                android:stateListAnimator="@null" android:elevation="6dp"
+                android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

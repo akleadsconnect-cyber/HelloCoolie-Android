@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_50">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER GRADIENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_orange_blue"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="40dp">
+
+            <!-- Welcome row -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/tv_welcome"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Hello, Akshay 👋"
+                        android:textColor="@color/white" android:textSize="22sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Where are you travelling today?"
+                        android:textColor="#FFFFFFBB" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <!-- Notification bell -->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_orange"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_bell"
+                    app:tint="@color/white"/>
+            </LinearLayout>
+
+            <!-- MAIN BOOK BUTTON - Hero CTA -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="12dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/btn_book_coolie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground">
+
+                    <!-- Icon -->
+                    <FrameLayout android:layout_width="56dp" android:layout_height="56dp"
+                        android:layout_marginEnd="16dp">
+                        <View android:layout_width="56dp" android:layout_height="56dp"
+                            android:background="@drawable/card_orange_bg"/>
+                        <TextView android:layout_width="56dp" android:layout_height="56dp"
+                            android:text="🧳" android:textSize="26sp" android:gravity="center"/>
+                    </FrameLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Book a Porter"
+                            android:textColor="@color/gray_900" android:textSize="18sp"
+                            android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Tap to book instantly or schedule"
+                            android:textColor="@color/gray_400" android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/hc_orange"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- CONTENT SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp">
+
+            <!-- Quick stats row -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="20dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="16dp" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="💰" android:textSize="22sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="₹80"
+                            android:textSize="18sp" android:textStyle="bold"
+                            android:textColor="@color/hc_orange" android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Base fare" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginHorizontal="4dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="16dp" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="⏱️" android:textSize="22sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="30s"
+                            android:textSize="18sp" android:textStyle="bold"
+                            android:textColor="@color/hc_blue" android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Response time" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="8dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="16dp" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="⭐" android:textSize="22sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Verified"
+                            android:textSize="18sp" android:textStyle="bold"
+                            android:textColor="@color/hc_green" android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="All porters" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- How it works -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="How it works"
+                android:textColor="@color/gray_900" android:textSize="17sp"
+                android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                android:layout_marginBottom="14dp"/>
+
+            <!-- Steps -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+                    <include layout="@layout/item/item_step" android:id="@+id/step1"/>
+                    <View android:layout_width="1dp" android:layout_height="24dp"
+                        android:background="@color/gray_200" android:layout_marginStart="20dp"/>
+                    <include layout="@layout/item/item_step" android:id="@+id/step2"/>
+                    <View android:layout_width="1dp" android:layout_height="24dp"
+                        android:background="@color/gray_200" android:layout_marginStart="20dp"/>
+                    <include layout="@layout/item/item_step" android:id="@+id/step3"/>
+                    <View android:layout_width="1dp" android:layout_height="24dp"
+                        android:background="@color/gray_200" android:layout_marginStart="20dp"/>
+                    <include layout="@layout/item/item_step" android:id="@+id/step4"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- SOS Button -->
+            <Button
+                android:id="@+id/btn_sos"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🆘  Emergency SOS"
+                android:textColor="@color/hc_red"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="@drawable/card_red_bg"
+                android:stateListAnimator="@null"
+                android:layout_marginBottom="24dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

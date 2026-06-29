@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Porter Login 🔴"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray_900"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in to start accepting bookings"
+            android:textSize="14sp"
+            android:textColor="@color/gray_500"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Status: Pending notice -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_orange_bg"
+            android:padding="14dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ℹ️" android:textSize="18sp" android:layout_marginEnd="10dp"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="New registrations need admin approval (24–48 hrs)"
+                android:textColor="@color/hc_orange_dark"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Phone -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="MOBILE NUMBER" android:textSize="11sp" android:textStyle="bold"
+            android:textColor="@color/gray_700" android:letterSpacing="0.08" android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            style="@style/Widget.HelloCoolie.TextInput"
+            app:startIconDrawable="@drawable/ic_phone"
+            app:startIconTint="@color/gray_400"
+            app:boxStrokeColor="@color/hc_orange"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_porter_phone"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:inputType="phone" android:maxLength="10"
+                android:hint="Enter 10-digit number"
+                android:textSize="16sp" android:textColor="@color/gray_900"
+                android:background="@null" android:paddingStart="4dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="PASSWORD" android:textSize="11sp" android:textStyle="bold"
+            android:textColor="@color/gray_700" android:letterSpacing="0.08" android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.HelloCoolie.TextInput"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:startIconTint="@color/gray_400"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/gray_400"
+            app:boxStrokeColor="@color/hc_orange"
+            app:hintEnabled="false">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_porter_password"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:inputType="textPassword"
+                android:hint="Your password"
+                android:textSize="16sp" android:textColor="@color/gray_900"
+                android:background="@null" android:paddingStart="4dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView android:id="@+id/tv_porter_forgot"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="Forgot Password?" android:textColor="@color/hc_orange"
+            android:textSize="13sp" android:textStyle="bold"
+            android:layout_marginBottom="28dp" android:padding="4dp"
+            android:clickable="true" android:focusable="true"/>
+
+        <!-- Login Button (Blue for porter) -->
+        <Button android:id="@+id/btn_porter_login"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:text="Sign in as Porter →"
+            android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold"
+            android:background="@drawable/btn_blue"
+            android:stateListAnimator="@null" android:elevation="6dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="New porter? " android:textColor="@color/gray_500" android:textSize="14sp"/>
+            <TextView android:id="@+id/tv_porter_register"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Register here"
+                android:textColor="@color/hc_orange" android:textSize="14sp" android:textStyle="bold"
+                android:clickable="true" android:focusable="true"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

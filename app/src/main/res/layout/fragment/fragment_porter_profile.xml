@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_porter_profile.xml -->
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_50">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Profile Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_orange_blue"
+            android:orientation="vertical" android:gravity="center"
+            android:paddingTop="48dp" android:paddingBottom="32dp" android:paddingHorizontal="20dp">
+
+            <!-- Avatar -->
+            <FrameLayout android:layout_width="80dp" android:layout_height="80dp"
+                android:layout_marginBottom="12dp">
+                <View android:layout_width="80dp" android:layout_height="80dp"
+                    android:background="@drawable/circle_orange"/>
+                <TextView android:id="@+id/tv_avatar"
+                    android:layout_width="80dp" android:layout_height="80dp"
+                    android:text="R" android:textSize="36sp" android:textStyle="bold"
+                    android:textColor="@color/white" android:gravity="center"/>
+            </FrameLayout>
+
+            <TextView android:id="@+id/tv_name"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Ramesh Kumar" android:textColor="@color/white"
+                android:textSize="22sp" android:textStyle="bold"
+                android:fontFamily="@font/nunito_bold" android:layout_marginBottom="4dp"/>
+
+            <TextView android:id="@+id/tv_phone"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="+91 98XXXXXXXX" android:textColor="#FFFFFFBB"
+                android:textSize="14sp" android:layout_marginBottom="16dp"/>
+
+            <!-- Stats row -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="#33FFFFFF"
+                android:paddingVertical="12dp" android:paddingHorizontal="20dp">
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tv_rating"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="★ 4.9" android:textColor="#FFD700"
+                        android:textSize="18sp" android:textStyle="bold"
+                        android:fontFamily="@font/nunito_bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Rating" android:textColor="#FFFFFFBB" android:textSize="11sp"/>
+                </LinearLayout>
+
+                <View android:layout_width="1dp" android:layout_height="32dp"
+                    android:background="#FFFFFF44"/>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tv_bookings"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="148" android:textColor="@color/white"
+                        android:textSize="18sp" android:textStyle="bold"
+                        android:fontFamily="@font/nunito_bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Total Trips" android:textColor="#FFFFFFBB" android:textSize="11sp"/>
+                </LinearLayout>
+
+                <View android:layout_width="1dp" android:layout_height="32dp"
+                    android:background="#FFFFFF44"/>
+
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                    <TextView android:id="@+id/tv_badge"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="NDLS" android:textColor="@color/white"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Badge" android:textColor="#FFFFFFBB" android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- CONTENT -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingTop="20dp">
+
+            <!-- Station info card -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📍  My Station" android:textColor="@color/gray_900"
+                        android:textSize="14sp" android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView android:id="@+id/tv_station"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="New Delhi Railway Station"
+                        android:textColor="@color/hc_blue" android:textSize="16sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Language card -->
+            <androidx.cardview.widget.CardView android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🌐  Language / भाषा"
+                        android:textColor="@color/gray_900" android:textSize="14sp"
+                        android:textStyle="bold" android:layout_marginBottom="12dp"/>
+                    <RadioGroup android:id="@+id/rg_language"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/rb_hindi"
+                            android:layout_width="0dp" android:layout_height="48dp"
+                            android:layout_weight="1" android:text="🇮🇳 हिंदी"
+                            android:textSize="15sp" android:checked="true"
+                            android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/rb_english"
+                            android:layout_width="0dp" android:layout_height="48dp"
+                            android:layout_weight="1" android:text="🇬🇧 English"
+                            android:textSize="15sp" android:buttonTint="@color/hc_orange"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Logout button -->
+            <Button android:id="@+id/btn_logout"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:text="Sign Out"
+                android:textColor="@color/hc_red" android:textSize="16sp"
+                android:textStyle="bold" android:background="@drawable/card_red_bg"
+                android:stateListAnimator="@null" android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

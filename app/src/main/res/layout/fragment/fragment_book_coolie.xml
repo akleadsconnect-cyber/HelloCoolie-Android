@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_50">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_orange_blue"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingHorizontal="16dp" android:paddingTop="48dp" android:paddingBottom="24dp">
+            <ImageView android:id="@+id/btn_back"
+                android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@drawable/ic_arrow_right" android:rotation="180"
+                android:layout_marginEnd="12dp" app:tint="@color/white"
+                android:clickable="true" android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Book a Porter"
+                    android:textColor="@color/white" android:textSize="20sp"
+                    android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Fill details below"
+                    android:textColor="#FFFFFFBB" android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- FORM CONTENT -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingTop="20dp">
+
+            <!-- ── TRAVELLER DETAILS CARD ── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="👤  Traveller Details"
+                        android:textColor="@color/gray_900" android:textSize="15sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:layout_marginBottom="14dp"/>
+
+                    <!-- Booking for -->
+                    <RadioGroup android:id="@+id/rg_for"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="14dp">
+                        <RadioButton android:id="@+id/rb_myself"
+                            android:layout_width="0dp" android:layout_height="42dp"
+                            android:layout_weight="1" android:text="Myself"
+                            android:textColor="@color/gray_700" android:textSize="14sp"
+                            android:checked="true"
+                            android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/rb_other"
+                            android:layout_width="0dp" android:layout_height="42dp"
+                            android:layout_weight="1" android:text="Someone Else"
+                            android:textColor="@color/gray_700" android:textSize="14sp"
+                            android:buttonTint="@color/hc_orange"/>
+                    </RadioGroup>
+
+                    <!-- Name -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="Traveller Name *">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_traveller_name"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="textPersonName" android:textSize="15sp"
+                            android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Phone -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="Traveller Mobile *">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_traveller_phone"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="phone" android:maxLength="10"
+                            android:textSize="15sp" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Age + Gender row -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_marginEnd="8dp"
+                            style="@style/Widget.HelloCoolie.TextInput"
+                            app:boxStrokeColor="@color/hc_orange"
+                            android:hint="Age">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_age"
+                                android:layout_width="match_parent" android:layout_height="52dp"
+                                android:inputType="number" android:maxLength="3"
+                                android:background="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_gender"
+                            android:layout_width="0dp" android:layout_height="52dp"
+                            android:layout_weight="1" android:layout_marginStart="8dp"
+                            android:background="@drawable/card_white"
+                            android:entries="@array/gender_options"
+                            android:paddingHorizontal="12dp"/>
+                    </LinearLayout>
+
+                    <!-- Senior + Woman solo toggles -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginTop="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="horizontal"
+                            android:gravity="center_vertical" android:layout_marginEnd="8dp"
+                            android:background="@drawable/card_blue_bg"
+                            android:paddingHorizontal="12dp" android:paddingVertical="8dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="👴 Senior Citizen" android:textSize="12sp"
+                                android:textColor="@color/hc_blue_dark"/>
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switch_senior"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                app:trackTint="@color/hc_blue"
+                                app:thumbTint="@color/white"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="horizontal"
+                            android:gravity="center_vertical" android:layout_marginStart="8dp"
+                            android:background="@drawable/card_orange_bg"
+                            android:paddingHorizontal="12dp" android:paddingVertical="8dp">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="👩 Solo Woman" android:textSize="12sp"
+                                android:textColor="@color/hc_orange_dark"/>
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switch_woman_solo"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                app:trackTint="@color/hc_orange"
+                                app:thumbTint="@color/white"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── TRAIN DETAILS CARD ── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🚂  Train Details"
+                        android:textColor="@color/gray_900" android:textSize="15sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:layout_marginBottom="14dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="PNR Number (optional)">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_pnr"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="number" android:maxLength="10"
+                            android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        style="@style/Widget.HelloCoolie.TextInput"
+                        app:boxStrokeColor="@color/hc_orange"
+                        android:hint="Arrival Station *">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_station"
+                            android:layout_width="match_parent" android:layout_height="52dp"
+                            android:inputType="textCapWords" android:background="@null"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_marginEnd="8dp"
+                            style="@style/Widget.HelloCoolie.TextInput"
+                            app:boxStrokeColor="@color/hc_orange"
+                            android:hint="Train No.">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_train_no"
+                                android:layout_width="match_parent" android:layout_height="52dp"
+                                android:inputType="number" android:background="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:layout_marginStart="8dp"
+                            style="@style/Widget.HelloCoolie.TextInput"
+                            app:boxStrokeColor="@color/hc_orange"
+                            android:hint="Coach (e.g. B2)">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_coach"
+                                android:layout_width="match_parent" android:layout_height="52dp"
+                                android:inputType="textCapCharacters" android:background="@null"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── BAGGAGE CARD ── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🧳  Baggage Details"
+                        android:textColor="@color/gray_900" android:textSize="15sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:layout_marginBottom="14dp"/>
+
+                    <!-- Bag counter -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Number of Bags"
+                            android:textColor="@color/gray_700" android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center_vertical"
+                            android:background="@drawable/card_white" android:padding="4dp">
+                            <Button android:id="@+id/btn_bag_minus"
+                                android:layout_width="36dp" android:layout_height="36dp"
+                                android:text="−" android:textSize="20sp" android:textColor="@color/hc_orange"
+                                android:background="@drawable/card_orange_bg"
+                                android:stateListAnimator="@null" android:padding="0dp"/>
+                            <TextView android:id="@+id/tv_bag_count"
+                                android:layout_width="52dp" android:layout_height="36dp"
+                                android:text="1" android:textSize="20sp" android:textStyle="bold"
+                                android:textColor="@color/gray_900" android:gravity="center"
+                                android:fontFamily="@font/nunito_bold"/>
+                            <Button android:id="@+id/btn_bag_plus"
+                                android:layout_width="36dp" android:layout_height="36dp"
+                                android:text="+" android:textSize="20sp" android:textColor="@color/white"
+                                android:background="@drawable/btn_orange"
+                                android:stateListAnimator="@null" android:padding="0dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 2 porter suggestion notice -->
+                    <LinearLayout android:id="@+id/tv_two_porter_warning"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:background="@drawable/card_orange_bg" android:padding="12dp"
+                        android:orientation="horizontal" android:visibility="gone"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="⚠️ " android:textSize="14sp"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="5+ bags: We recommend 2 porters"
+                            android:textColor="@color/hc_orange_dark" android:textSize="12sp"/>
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switch_two_porter"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="" app:trackTint="@color/hc_orange"/>
+                    </LinearLayout>
+
+                    <!-- Bag weight -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Bag Weight" android:textColor="@color/gray_700"
+                        android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+
+                    <RadioGroup android:id="@+id/rg_weight"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:layout_marginBottom="16dp">
+                        <RadioButton android:id="@+id/rb_normal"
+                            android:layout_width="match_parent" android:layout_height="40dp"
+                            android:text="Normal (up to 15kg) — ₹40/bag"
+                            android:textSize="13sp" android:checked="true"
+                            android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/rb_medium"
+                            android:layout_width="match_parent" android:layout_height="40dp"
+                            android:text="Medium (15–25kg) — ₹50/bag"
+                            android:textSize="13sp" android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/rb_heavy"
+                            android:layout_width="match_parent" android:layout_height="40dp"
+                            android:text="Heavy (25–35kg) — ₹60/bag"
+                            android:textSize="13sp" android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/rb_very_heavy"
+                            android:layout_width="match_parent" android:layout_height="40dp"
+                            android:text="Very Heavy (35kg+) — ₹80/bag"
+                            android:textSize="13sp" android:buttonTint="@color/hc_orange"/>
+                    </RadioGroup>
+
+                    <!-- Drop location -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Drop Location" android:textColor="@color/gray_700"
+                        android:textSize="13sp" android:textStyle="bold" android:layout_marginBottom="10dp"/>
+                    <RadioGroup android:id="@+id/rg_drop"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <RadioButton android:id="@+id/rb_platform"
+                            android:layout_width="match_parent" android:layout_height="40dp"
+                            android:text="Platform only — ₹0 extra"
+                            android:textSize="13sp" android:checked="true"
+                            android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/rb_exit"
+                            android:layout_width="match_parent" android:layout_height="40dp"
+                            android:text="Station exit — ₹40 extra"
+                            android:textSize="13sp" android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/rb_auto"
+                            android:layout_width="match_parent" android:layout_height="40dp"
+                            android:text="Auto stand — ₹80 extra"
+                            android:textSize="13sp" android:buttonTint="@color/hc_orange"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── FARE PREVIEW CARD ── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white"
+                app:strokeColor="@color/hc_orange" app:strokeWidth="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="14dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="💰  Fare Breakdown"
+                            android:textColor="@color/gray_900" android:textSize="15sp"
+                            android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Live price" android:textColor="@color/hc_green"
+                            android:textSize="11sp" android:textStyle="bold"
+                            android:background="@drawable/badge_green"
+                            android:paddingHorizontal="8dp" android:paddingVertical="3dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Fare rows -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="32dp"
+                            android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:text="Base fare"
+                                android:textColor="@color/gray_500" android:textSize="13sp"/>
+                            <TextView android:id="@+id/tv_base_fare"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="₹80" android:textColor="@color/gray_700"
+                                android:textSize="13sp" android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="32dp"
+                            android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:text="Bag fare"
+                                android:textColor="@color/gray_500" android:textSize="13sp"/>
+                            <TextView android:id="@+id/tv_bag_fare"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="₹0" android:textColor="@color/gray_700"
+                                android:textSize="13sp" android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="32dp"
+                            android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:text="Distance charge"
+                                android:textColor="@color/gray_500" android:textSize="13sp"/>
+                            <TextView android:id="@+id/tv_distance_fare"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="₹0" android:textColor="@color/gray_700"
+                                android:textSize="13sp" android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="32dp"
+                            android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:text="Platform fee (15%)"
+                                android:textColor="@color/gray_500" android:textSize="13sp"/>
+                            <TextView android:id="@+id/tv_platform_fee"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="₹0" android:textColor="@color/gray_700"
+                                android:textSize="13sp" android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <!-- Divider -->
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="@color/gray_200" android:layout_marginVertical="8dp"/>
+
+                        <!-- Total -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="40dp"
+                            android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:text="Total"
+                                android:textColor="@color/gray_900" android:textSize="16sp"
+                                android:textStyle="bold"/>
+                            <TextView android:id="@+id/tv_total_fare"
+                                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="₹80" android:textColor="@color/hc_orange"
+                                android:textSize="22sp" android:textStyle="bold"
+                                android:fontFamily="@font/nunito_bold"/>
+                        </LinearLayout>
+
+                        <TextView android:id="@+id/tv_porter_amount"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Porter receives: ₹68"
+                            android:textColor="@color/hc_green" android:textSize="12sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── PAYMENT METHOD ── -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="💳  Payment Method"
+                        android:textColor="@color/gray_900" android:textSize="15sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:layout_marginBottom="12dp"/>
+                    <RadioGroup android:id="@+id/rg_payment"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <RadioButton android:id="@+id/rb_online"
+                            android:layout_width="0dp" android:layout_height="48dp"
+                            android:layout_weight="1" android:text="💳 Online (UPI)"
+                            android:textSize="14sp" android:checked="true"
+                            android:buttonTint="@color/hc_orange"/>
+                        <RadioButton android:id="@+id/rb_cash"
+                            android:layout_width="0dp" android:layout_height="48dp"
+                            android:layout_weight="1" android:text="💵 Cash"
+                            android:textSize="14sp" android:buttonTint="@color/hc_orange"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ── BOOK NOW BUTTON ── -->
+            <Button android:id="@+id/btn_book_now"
+                android:layout_width="match_parent" android:layout_height="60dp"
+                android:text="🧳  Book Porter Now"
+                android:textColor="@color/white" android:textSize="18sp"
+                android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                android:background="@drawable/ripple_orange"
+                android:stateListAnimator="@null" android:elevation="8dp"
+                android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <!-- Status + Booking ID row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <TextView android:id="@+id/tv_status_badge"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="✅ Completed"
+                android:textColor="@color/hc_green" android:textSize="11sp" android:textStyle="bold"
+                android:background="@drawable/badge_green" android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"/>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+            <TextView android:id="@+id/tv_booking_id"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="BK2026001" android:textColor="@color/gray_400"
+                android:textSize="11sp" android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <!-- Station row -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🚉 " android:textSize="14sp"/>
+            <TextView android:id="@+id/tv_station"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="New Delhi Station"
+                android:textColor="@color/gray_900" android:textSize="15sp"
+                android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+        </LinearLayout>
+
+        <!-- Bags + train -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <TextView android:id="@+id/tv_bags"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🧳 2 bags (Normal)"
+                android:textColor="@color/gray_500" android:textSize="13sp"/>
+            <TextView android:id="@+id/tv_date"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="29 Jun 2026"
+                android:textColor="@color/gray_400" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/gray_100" android:layout_marginBottom="12dp"/>
+
+        <!-- Amount + Porter -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:id="@+id/tv_porter_name"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Porter: Ramesh K."
+                    android:textColor="@color/gray_600" android:textSize="12sp"/>
+                <TextView android:id="@+id/tv_payment"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="💳 Online"
+                    android:textColor="@color/gray_400" android:textSize="11sp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/tv_amount"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="₹120"
+                android:textColor="@color/hc_orange" android:textSize="20sp"
+                android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- btn_orange.xml - Primary orange button background -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#D4621A" android:endColor="#C25010" android:angle="135"/>
+            <corners android:radius="14dp"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#F47920" android:endColor="#D4621A" android:angle="135"/>
+            <corners android:radius="14dp"/>
+        </shape>
+    </item>
+</selector>

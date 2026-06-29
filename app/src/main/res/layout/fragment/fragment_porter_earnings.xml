@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_50">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_orange_blue"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="28dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="My Earnings 💰"
+                android:textColor="@color/white" android:textSize="24sp"
+                android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Track your income and performance"
+                android:textColor="#FFFFFFBB" android:textSize="13sp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- All-time total prominent -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp" app:cardElevation="8dp"
+                app:cardBackgroundColor="#33FFFFFF">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="All Time Earnings"
+                        android:textColor="#FFFFFFBB" android:textSize="12sp"
+                        android:letterSpacing="0.06" android:textAllCaps="true"
+                        android:layout_marginBottom="6dp"/>
+                    <TextView android:id="@+id/tv_all_time"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="₹0"
+                        android:textColor="@color/white" android:textSize="40sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+                    <TextView android:id="@+id/tv_all_time_trips"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0 total trips"
+                        android:textColor="#FFFFFFBB" android:textSize="12sp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp">
+
+            <!-- Quick stat cards: Today / Week / Month -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="20dp">
+
+                <!-- Today -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:strokeColor="@color/hc_orange" app:strokeWidth="2dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="TODAY" android:textSize="9sp" android:textStyle="bold"
+                            android:textColor="@color/hc_orange" android:letterSpacing="0.1"
+                            android:layout_marginBottom="4dp"/>
+                        <TextView android:id="@+id/tv_today"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="₹0" android:textSize="20sp" android:textStyle="bold"
+                            android:textColor="@color/gray_900" android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:id="@+id/tv_today_trips"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0 trips" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- This week -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginHorizontal="3dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="THIS WEEK" android:textSize="9sp" android:textStyle="bold"
+                            android:textColor="@color/hc_blue" android:letterSpacing="0.1"
+                            android:layout_marginBottom="4dp"/>
+                        <TextView android:id="@+id/tv_week"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="₹0" android:textSize="20sp" android:textStyle="bold"
+                            android:textColor="@color/gray_900" android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:id="@+id/tv_week_trips"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0 trips" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- This month -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="6dp"
+                    app:cardCornerRadius="14dp" app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/white">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="THIS MONTH" android:textSize="9sp" android:textStyle="bold"
+                            android:textColor="@color/hc_green" android:letterSpacing="0.1"
+                            android:layout_marginBottom="4dp"/>
+                        <TextView android:id="@+id/tv_month"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="₹0" android:textSize="20sp" android:textStyle="bold"
+                            android:textColor="@color/gray_900" android:fontFamily="@font/nunito_bold"/>
+                        <TextView android:id="@+id/tv_month_trips"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="0 trips" android:textColor="@color/gray_400" android:textSize="11sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- 7-Day Bar Chart -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Last 7 Days"
+                        android:textColor="@color/gray_900" android:textSize="15sp"
+                        android:textStyle="bold" android:fontFamily="@font/nunito_bold"
+                        android:layout_marginBottom="16dp"/>
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/bar_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Best day card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_best_day"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:visibility="gone"
+                app:cardCornerRadius="14dp" app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/hc_orange_bg"
+                app:strokeColor="@color/hc_orange_border" app:strokeWidth="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="🏆" android:textSize="28sp" android:layout_marginEnd="14dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Your Best Day Ever!"
+                            android:textColor="@color/hc_orange_dark" android:textSize="13sp"
+                            android:textStyle="bold"/>
+                        <TextView android:id="@+id/tv_best_day"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/hc_orange" android:textSize="12sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

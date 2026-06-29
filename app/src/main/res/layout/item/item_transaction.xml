@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="12dp"
+    android:paddingHorizontal="16dp"
+    android:background="@color/white">
+
+    <FrameLayout android:layout_width="40dp" android:layout_height="40dp"
+        android:layout_marginEnd="14dp">
+        <View android:layout_width="40dp" android:layout_height="40dp"
+            android:background="@drawable/card_green_bg"/>
+        <TextView android:id="@+id/tv_type_icon"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:text="↑" android:textSize="20sp"
+            android:gravity="center" android:textColor="@color/hc_green"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tv_description"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Booking payment"
+            android:textColor="@color/gray_900" android:textSize="14sp"
+            android:textStyle="bold"/>
+        <TextView android:id="@+id/tv_date"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="29 Jun 2026"
+            android:textColor="@color/gray_400" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tv_amount"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="+₹110"
+        android:textColor="@color/hc_green" android:textSize="16sp"
+        android:textStyle="bold" android:fontFamily="@font/nunito_bold"/>
+</LinearLayout>
