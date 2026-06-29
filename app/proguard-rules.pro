@@ -1,0 +1,10 @@
+-keep class in.hellocoolie.data.model.** { *; }
+-keep class com.google.gson.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
+-dontwarn okhttp3.**
+-dontwarn okio.**
+-dontwarn retrofit2.**
+-keep class retrofit2.** { *; }
+-keep class io.socket.** { *; }
+-keep class com.razorpay.** { *; }
