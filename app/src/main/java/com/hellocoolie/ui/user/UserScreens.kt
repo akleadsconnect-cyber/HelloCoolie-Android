@@ -101,6 +101,17 @@ class UserViewModel @Inject constructor(
     fun logout() = viewModelScope.launch { authRepository.logout() }
 }
 
+    data class UserStats(val totalBookings: Int, val totalSpend: Int, val avgTime: String)
+
+    suspend fun getUserStats(): UserStats? = try {
+        val r = bookingRepository.getMyBookings()
+        if (r is Result.Success) {
+            val list = r.data
+            UserStats(list.size, list.sumOf { it.totalAmount?.toIntOrNull() ?: 0 }, "—")
+        } else null
+    } catch (e: Exception) { null }
+}
+
 sealed class UserUiState {
     object Idle : UserUiState()
     object Loading : UserUiState()
@@ -286,8 +297,8 @@ class BookCoolieFragment : Fragment() {
 
         binding.btnBookNow.setOnClickListener { submitBooking() }
 
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.uiState.collect { state ->
                     when (state) {
                         is UserUiState.Loading -> { binding.btnBookNow.isEnabled = false; binding.btnBookNow.text = "Booking..." }
@@ -303,8 +314,8 @@ class BookCoolieFragment : Fragment() {
             }
         }
 
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.farePreview.collect { fare ->
                     fare?.let { updateFareUI(it) }
                 }
