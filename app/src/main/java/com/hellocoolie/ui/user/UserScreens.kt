@@ -232,6 +232,7 @@ class UserHomeFragment : Fragment() {
         val user = viewModel.currentUser
         binding.tvWelcome.text = "Hello, ${user?.name?.split(" ")?.firstOrNull() ?: "Traveller"} 👋"
 
+        binding.tvMyOtp.text = computeFixedOTP(viewModel.currentUser?.phone ?: "")
         binding.btnBookCoolie.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(android.R.id.content, BookCoolieFragment())
@@ -259,6 +260,23 @@ class UserHomeFragment : Fragment() {
             }
             .setNegativeButton("Cancel", null)
             .show()
+    }
+
+    /** Same formula as backend generateFixedOTP() — deterministic 6-digit OTP per phone */
+    private fun computeFixedOTP(phone: String): String {
+        val digits = phone.filter { it.isDigit() }
+        var hash = 0
+        for (d in digits) { hash = (hash * 31 + d.digitToInt()) % 900000 }
+        return (100000 + hash).toString()
+    }
+
+
+    /** Same formula as backend generateFixedOTP() */
+    private fun computeFixedOTP(phone: String): String {
+        val digits = phone.filter { it.isDigit() }
+        var hash = 0
+        for (d in digits) { hash = (hash * 31 + d.digitToInt()) % 900000 }
+        return (100000 + hash).toString()
     }
 
     override fun onDestroyView() { super.onDestroyView(); _binding = null }
