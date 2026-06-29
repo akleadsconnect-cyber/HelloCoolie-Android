@@ -77,7 +77,7 @@
                 app:tabIndicatorHeight="3dp"
                 app:tabIndicatorGravity="bottom"
                 app:tabRippleColor="@color/hc_orange_bg"
-                app:tabTextAppearance="@style/TextAppearance.HelloCoolie.Label"/>
+                />
 
             <!-- ViewPager -->
             <androidx.viewpager2.widget.ViewPager2

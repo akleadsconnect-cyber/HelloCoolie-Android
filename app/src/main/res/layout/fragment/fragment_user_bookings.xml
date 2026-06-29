@@ -24,7 +24,7 @@
             app:tabIndicatorHeight="2dp"
             app:tabRippleColor="@color/transparent"
             app:tabMode="scrollable"
-            app:tabTextAppearance="@style/TextAppearance.HelloCoolie.Label"/>
+            />
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_bookings"

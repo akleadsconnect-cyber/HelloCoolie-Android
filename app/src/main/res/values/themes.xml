@@ -76,13 +76,13 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="TextAppearance.HelloCoolie.Headline">
+    <style name="TextAppearance.HelloCoolie.Headline" parent="TextAppearance.Material3.HeadlineMedium">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/gray_900</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="TextAppearance.HelloCoolie.Label">
+    <style name="TextAppearance.HelloCoolie.Label" parent="TextAppearance.Material3.LabelSmall">
         <item name="android:textSize">11sp</item>
         <item name="android:textColor">@color/gray_500</item>
         <item name="android:letterSpacing">0.08</item>
@@ -90,13 +90,13 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="TextAppearance.HelloCoolie.Amount">
+    <style name="TextAppearance.HelloCoolie.Amount" parent="TextAppearance.Material3.HeadlineLarge">
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/hc_orange</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="TextAppearance.HelloCoolie.Body">
+    <style name="TextAppearance.HelloCoolie.Body" parent="TextAppearance.Material3.BodyMedium">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/gray_700</item>
     </style>
