@@ -408,11 +408,7 @@ class BookCoolieFragment : Fragment() {
 
     private fun toast(msg: String) = Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
 
-    private fun <T> kotlinx.coroutines.flow.StateFlow<T>.observe(owner: androidx.lifecycle.LifecycleOwner, observer: (T) -> Unit) {
-        lifecycleScope.launch {
-            androidx.lifecycle.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) { collect { observer(it) } }
-        }
-    }
+
 
     override fun onDestroyView() { super.onDestroyView(); _binding = null }
 }
